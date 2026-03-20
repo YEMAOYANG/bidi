@@ -1,3 +1,15 @@
+
+/* ── PRICING WRAPPER (badge 不被截断) ── */
+.pricing-card-wrapper {
+  position: relative;
+  padding-top: 0;
+  flex: 0 0 280px;         /* 横滑固定宽 */
+  scroll-snap-align: center;
+}
+.pricing-card-wrapper--hot {
+  padding-top: 14px;       /* 给 badge 留空间 */
+}
+
 @import "tailwindcss";
 @import "@nuxt/ui";
 
@@ -397,14 +409,11 @@ body {
   --ui-card-ring: 0 0 0 0 transparent !important;
   box-shadow: none !important;
 
-  flex: 0 0 280px;
-  scroll-snap-align: center;
   background: #0f172a;
   border: 1px solid rgba(148, 163, 184, 0.08);
   border-radius: 16px;
   padding: 28px 24px;
   text-align: center;
-  position: relative;
   display: flex;
   flex-direction: column;
   transition:
@@ -615,7 +624,7 @@ body {
     scroll-snap-type: none;
     padding: 20px 0 0;
   }
-  .pricing-card { flex: unset; scroll-snap-align: unset; }
+  .pricing-card-wrapper { flex: unset; scroll-snap-align: unset; }
   .pricing-dots { display: none; }
 }
 @media (min-width: 1024px) {
@@ -627,9 +636,10 @@ body {
     scroll-snap-type: none;
     padding: 20px 0 0;
   }
-  .pricing-card { flex: unset; scroll-snap-align: unset; }
-  .pricing-card--hot { transform: scale(1.03); z-index: 1; }
-  .pricing-card--hot:hover { transform: scale(1.03) translateY(-4px); }
+  .pricing-card-wrapper { flex: unset; scroll-snap-align: unset; }
+  .pricing-card-wrapper--hot { transform: scale(1.03); z-index: 1; }
+  .pricing-card-wrapper--hot:hover { transform: scale(1.03) translateY(-4px); }
+  .pricing-card-wrapper--hot:hover .pricing-card--hot { transform: translateY(-4px); }
   .pricing-dots { display: none; }
 }
 

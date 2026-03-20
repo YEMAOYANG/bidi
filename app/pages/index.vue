@@ -508,21 +508,26 @@ function animateParticles() {
 
         <!-- Snap scroll (mobile) / Grid (tablet+desktop) -->
         <div ref="pricingScroll" class="pricing-scroll reveal">
-          <UCard
+          <!-- wrapper div 承载 badge，UCard 不再 overflow:hidden 截断 -->
+          <div
             v-for="(plan, i) in page.pricing.plans"
             :key="plan.name"
-            :ui="{
-              root: 'relative',
-              header: '',
-              body: 'p-0',
-              footer: '',
-            }"
-            :class="['pricing-card', { 'pricing-card--hot': plan.popular }]"
+            class="pricing-card-wrapper"
+            :class="{ 'pricing-card-wrapper--hot': plan.popular }"
           >
-            <!-- Hot badge — 自定义 div, 不用 UBadge -->
+            <!-- Hot badge 放在 UCard 外层，不会被截断 -->
             <div v-if="plan.popular" class="pricing-badge">
               {{ t('pricing.popular') }}
             </div>
+            <UCard
+              :ui="{
+                root: '',
+                header: '',
+                body: 'p-0',
+                footer: '',
+              }"
+              :class="['pricing-card h-full', { 'pricing-card--hot': plan.popular }]"
+            >
 
             <!-- Plan period -->
             <p class="plan-period">{{ plan.name }}</p>
