@@ -78,6 +78,35 @@ const pricingFeatures = computed(() => [
   t('pricing.planMonth') ? '多设备同时连接' : 'Multi-device'
 ])
 
+/* ── Pricing Snap Scroll ── */
+const pricingScroll = ref<HTMLElement | null>(null)
+const pricingActive = ref(1) // default to hot card (quarterly)
+
+function pricingScrollTo(index: number) {
+  const container = pricingScroll.value
+  if (!container) return
+  const card = container.children[index] as HTMLElement
+  if (!card) return
+  const offset = card.offsetLeft - (container.clientWidth - card.offsetWidth) / 2
+  container.scrollTo({ left: offset, behavior: 'smooth' })
+  pricingActive.value = index
+}
+
+function onPricingScroll() {
+  const container = pricingScroll.value
+  if (!container) return
+  const center = container.scrollLeft + container.clientWidth / 2
+  let closest = 0
+  let minDist = Infinity
+  Array.from(container.children).forEach((child, i) => {
+    const el = child as HTMLElement
+    const elCenter = el.offsetLeft + el.offsetWidth / 2
+    const dist = Math.abs(center - elCenter)
+    if (dist < minDist) { minDist = dist; closest = i }
+  })
+  pricingActive.value = closest
+}
+
 /* ── Scroll Reveal ── */
 onMounted(() => {
   const io = new IntersectionObserver(
@@ -93,6 +122,14 @@ onMounted(() => {
 
   // Hero SVG orbital particle animation
   animateParticles()
+
+  // Pricing: scroll to hot card on mobile, attach scroll listener
+  nextTick(() => {
+    if (pricingScroll.value && window.innerWidth < 768) {
+      pricingScrollTo(1)
+    }
+    pricingScroll.value?.addEventListener('scroll', onPricingScroll, { passive: true })
+  })
 })
 
 /* ── Orbital Particle Animation (§12.5) ── */
@@ -458,63 +495,91 @@ function animateParticles() {
     <!-- ═══════════════════ PRICING ═══════════════════ -->
     <section id="price" class="relative py-24 lg:py-32 overflow-hidden" style="background: var(--bg-void);">
       <UContainer class="relative z-10">
-        <div class="text-center mb-14 reveal">
-          <span class="section-tag">{{ page.pricing.title }}</span>
+        <!-- Header -->
+        <div class="text-center mb-10 reveal">
+          <UBadge color="primary" variant="subtle" size="xs" class="section-tag mb-4">
+            {{ page.pricing.title }}
+          </UBadge>
           <h2 class="section-title mb-3">
             选择您的<span class="gradient-text">计划</span>
           </h2>
           <p class="section-subtitle">{{ page.pricing.description }}</p>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-5xl mx-auto items-stretch reveal-stagger">
-          <div
+        <!-- Snap scroll container (mobile) / Grid (tablet+desktop) -->
+        <div ref="pricingScroll" class="pricing-scroll reveal">
+          <UCard
             v-for="(plan, i) in page.pricing.plans"
             :key="plan.name"
-            class="relative reveal h-full"
+            :class="['pricing-card', { 'pricing-card--hot': plan.popular }]"
+            :ui="{ base: '', background: '', ring: '', shadow: '', body: { padding: '' }, rounded: '' }"
           >
-            <!-- Popular badge -->
-            <div v-if="plan.popular" class="absolute -top-5 left-0 right-0 flex justify-center z-10">
-              <span class="pricing-badge">{{ t('pricing.popular') }}</span>
+            <!-- Hot badge -->
+            <UBadge
+              v-if="plan.popular"
+              color="primary"
+              variant="solid"
+              size="xs"
+              class="pricing-badge"
+            >
+              {{ t('pricing.popular') }}
+            </UBadge>
+
+            <!-- Plan period -->
+            <p class="plan-period">{{ plan.name }}</p>
+
+            <!-- Price -->
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-value">{{ plan.price.replace('$', '') }}</span>
             </div>
+            <p class="plan-per">{{ plan.perDay }}</p>
 
-            <div :class="plan.popular ? 'pricing-card pricing-card--hot h-full flex flex-col' : 'pricing-card h-full flex flex-col'" :style="plan.popular ? 'padding-top: 2.5rem;' : ''">
-              <!-- Plan name -->
-              <div class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: var(--text-tertiary); letter-spacing: 0.08em;">
-                {{ plan.name }}
-              </div>
+            <!-- Save badge -->
+            <UBadge
+              v-if="plan.save"
+              color="emerald"
+              variant="subtle"
+              size="xs"
+              class="plan-save"
+            >
+              {{ plan.save }}
+            </UBadge>
 
-              <!-- Price -->
-              <div class="pricing-value">{{ plan.price }}</div>
-              <div class="text-sm mt-2" style="color: var(--text-tertiary);">{{ plan.perDay }}</div>
+            <!-- Divider -->
+            <div class="plan-divider" />
 
-              <!-- Save badge -->
-              <div v-if="plan.save" class="pricing-save">{{ plan.save }}</div>
+            <!-- Features -->
+            <ul class="plan-features">
+              <li v-for="feat in pricingFeatures" :key="feat">
+                <UIcon name="i-heroicons-check-circle-solid" class="plan-check" />
+                {{ feat }}
+              </li>
+            </ul>
 
-              <!-- Divider -->
-              <div class="h-px my-6" style="background: var(--border-subtle);" />
+            <!-- CTA -->
+            <UButton
+              :color="plan.popular ? 'primary' : 'neutral'"
+              :variant="plan.popular ? 'solid' : 'outline'"
+              block
+              size="lg"
+              class="plan-cta"
+              to="#download"
+            >
+              {{ t('pricing.downloadPlan') }}
+            </UButton>
+          </UCard>
+        </div>
 
-              <!-- Features -->
-              <div class="text-left space-y-2.5 flex-grow">
-                <div v-for="feat in pricingFeatures" :key="feat" class="flex items-center gap-2.5 text-sm" style="color: var(--text-secondary);">
-                  <svg class="w-4 h-4 flex-shrink-0" style="color: var(--cyan-500);" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                  </svg>
-                  {{ feat }}
-                </div>
-              </div>
-
-              <!-- CTA -->
-              <a
-                href="#download"
-                class="block w-full text-center text-sm font-bold py-3 rounded-xl mt-6 transition-all duration-300"
-                :class="plan.popular ? 'btn-primary' : 'btn-secondary'"
-                style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 0.875rem);"
-                :style="plan.popular ? '' : 'padding: 0.75rem 1rem;'"
-              >
-                {{ t('pricing.downloadPlan') }}
-              </a>
-            </div>
-          </div>
+        <!-- Snap indicators (mobile only) -->
+        <div class="pricing-dots">
+          <button
+            v-for="(plan, i) in page.pricing.plans"
+            :key="'dot-' + i"
+            class="pricing-dot"
+            :class="{ active: pricingActive === i }"
+            @click="pricingScrollTo(i)"
+          />
         </div>
       </UContainer>
     </section>
