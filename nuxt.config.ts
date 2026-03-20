@@ -13,15 +13,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
 
-  i18n: {
-    locales: [
-      { code: 'zh-CN', name: '中文', file: 'zh-CN.json' },
-      { code: 'en', name: 'English', file: 'en.json' }
-    ],
-    defaultLocale: 'zh-CN',
-    strategy: 'no_prefix'
-  },
-
   devtools: {
     enabled: true
   },
@@ -70,6 +61,15 @@ export default defineNuxtConfig({
         arrowParens: true // 箭头函数参数总是使用括号
       }
     }
+  },
+
+  i18n: {
+    locales: [
+      { code: 'zh-CN', name: '中文', file: 'zh-CN.json' },
+      { code: 'en', name: 'English', file: 'en.json' }
+    ],
+    defaultLocale: 'zh-CN',
+    strategy: 'no_prefix'
   },
 
   image: {
