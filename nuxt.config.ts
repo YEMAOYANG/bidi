@@ -138,7 +138,7 @@ export default defineNuxtConfig({
     // 启用 TypeScript 声明文件生成
     dts: true,
     // 自动导入路径
-    autoImportPath: '~/assets/icons/',
+    autoImportPath: '~/assets/svg/',
     // 自动导入组件前缀
     componentPrefix: 'icon',
     // SVGO 优化配置

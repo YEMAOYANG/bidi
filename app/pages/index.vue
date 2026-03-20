@@ -1,17 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-import SvgApple from '~/assets/svg/apple.svg'
-import SvgGooglePlay from '~/assets/svg/google-play.svg'
-import SvgGooglePlayColored from '~/assets/svg/google-play-colored.svg'
-import SvgCheckBadge from '~/assets/svg/check-badge.svg'
-import SvgHeroDataSphere from '~/assets/svg/hero-data-sphere.svg'
-import SvgFeatureSpeed from '~/assets/svg/feature-speed.svg'
-import SvgFeatureShield from '~/assets/svg/feature-shield.svg'
-import SvgFeatureGlobe from '~/assets/svg/feature-globe.svg'
-import SvgArrowRight from '~/assets/svg/arrow-right.svg'
-import SvgAdvantageCheck from '~/assets/svg/advantage-check.svg'
-import SvgAdvantagesShieldVisual from '~/assets/svg/advantages-shield-visual.svg'
 
 const { t } = useI18n()
 
