@@ -150,6 +150,8 @@ export default defineNuxtConfig({
             overrides: {
               // 保留 viewBox，这对响应式很重要
               removeViewBox: false,
+              // Hero 球体等依赖固定 id（含 JS getElementById / url(#id)）
+              cleanupIds: false,
               // 内联样式优化
               inlineStyles: {
                 onlyMatchedOnce: false
