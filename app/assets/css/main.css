@@ -926,10 +926,89 @@ body {
   animation: ring-spin 10s linear infinite;
 }
 
-/* ── RESPONSIVE ── */
+/* ══════════════════════════════════════════
+   MOBILE (<768px)
+   ══════════════════════════════════════════ */
 @media (max-width: 767px) {
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
   .hero-glow { opacity: 0.5; }
+  /* P1修复: 下载按钮组竖排全宽 */
+  .download-buttons,
+  .hero-cta-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+  }
+  .download-buttons a,
+  .download-buttons button,
+  .hero-cta-group a,
+  .hero-cta-group button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  /* P2建议: feature-grid 语义 class 支持 */
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── Section 间距收紧 96→64px ── */
+  section {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+  section:first-of-type {
+    padding-top: 80px !important;
+    padding-bottom: 48px !important;
+  }
+  .text-center.mb-10 {
+    margin-bottom: 24px !important;
+  }
+  .stats-bar { margin-top: 40px; }
+
+  /* ── 标题字号响应式 ── */
+  .hero-title {
+    font-size: clamp(32px, 8vw, 48px) !important;
+  }
+  .section-title {
+    font-size: 28px !important;
+  }
+  .section-subtitle {
+    font-size: 15px !important;
+  }
+
+  /* ── Pricing 横滑优化 ── */
+  .pricing-scroll {
+    padding: 20px 24px 12px;
+    gap: 12px;
+  }
+  .pricing-card-wrapper {
+    flex: 0 0 calc(100vw - 72px);
+  }
+  .pricing-card {
+    padding: 24px 20px;
+  }
+  .plan-value {
+    font-size: 40px;
+  }
+  .plan-currency {
+    font-size: 18px;
+  }
+  .pricing-dots {
+    padding: 16px 0 0;
+  }
+
+  /* ── 功能卡 1 列 ── */
+  .grid.grid-cols-1.md\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* ── 下载按钮组竖排 ── */
+  .store-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* ── REDUCED MOTION ── */

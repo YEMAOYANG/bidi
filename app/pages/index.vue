@@ -305,7 +305,7 @@ function animateParticles() {
         </div>
 
         <!-- Feature cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 reveal-stagger">
+        <div class="feature-grid grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 reveal-stagger">
           <!-- Speed -->
           <div class="glass-card feature-card feature-card--speed reveal">
             <div class="feature-icon feature-icon--speed">
@@ -529,16 +529,17 @@ function animateParticles() {
             </UCard>
           </div>
 
-          <!-- Snap indicators (mobile only) -->
-          <div class="pricing-dots">
-            <button
-              v-for="(plan, i) in page.pricing.plans"
-              :key="'dot-' + i"
-              class="pricing-dot"
-              :class="{ active: pricingActive === i }"
-              @click="pricingScrollTo(i)"
-            ></button>
-          </div>
+        </div>
+
+        <!-- ★ Snap indicators — pricing-scroll 外面 -->
+        <div class="pricing-dots">
+          <button
+            v-for="(plan, i) in page.pricing.plans"
+            :key="'dot-' + i"
+            class="pricing-dot"
+            :class="{ active: pricingActive === i }"
+            @click="pricingScrollTo(i)"
+          />
         </div>
       </UContainer>
     </section>
