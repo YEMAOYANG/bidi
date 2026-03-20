@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
   <defs>
-    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+    <radialGradient id="hds-coreGlow" cx="50%" cy="50%" r="50%">
       <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.25" />
       <stop offset="40%" stop-color="#00f5ff" stop-opacity="0.08" />
       <stop offset="100%" stop-color="#00f5ff" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="sphereEdge" cx="50%" cy="50%" r="50%">
+    <radialGradient id="hds-sphereEdge" cx="50%" cy="50%" r="50%">
       <stop offset="70%" stop-color="transparent" />
       <stop offset="95%" stop-color="#00f5ff" stop-opacity="0.15" />
       <stop offset="100%" stop-color="#00f5ff" stop-opacity="0" />
     </radialGradient>
-    <radialGradient id="particleGlow">
+    <radialGradient id="hds-particleGlow">
       <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.9" />
       <stop offset="100%" stop-color="#00f5ff" stop-opacity="0" />
     </radialGradient>
   </defs>
   <circle cx="280" cy="280" r="240" fill="none" stroke="rgba(0,245,255,0.1)" stroke-width="1" stroke-dasharray="8 12" style="transform-origin: 280px 280px; animation: ring-spin 30s linear infinite;" />
-  <circle cx="280" cy="280" r="240" fill="url(#coreGlow)" />
-  <circle cx="280" cy="280" r="220" fill="url(#sphereEdge)" />
+  <circle cx="280" cy="280" r="240" fill="url(#hds-coreGlow)" />
+  <circle cx="280" cy="280" r="220" fill="url(#hds-sphereEdge)" />
   <ellipse cx="280" cy="280" rx="220" ry="50" fill="none" stroke="rgba(0,245,255,0.08)" stroke-width="1" />
   <ellipse cx="280" cy="280" rx="210" ry="130" fill="none" stroke="rgba(0,245,255,0.06)" stroke-width="1" transform="rotate(-30, 280, 280)" />
   <ellipse cx="280" cy="280" rx="200" ry="180" fill="none" stroke="rgba(124,58,237,0.06)" stroke-width="1" transform="rotate(20, 280, 280)" />
@@ -36,11 +36,11 @@
   <circle cx="150" cy="300" r="2" fill="rgba(0,245,255,0.3)" />
   <circle cx="380" cy="340" r="3" fill="rgba(0,245,255,0.35)" />
   <circle cx="180" cy="350" r="2.5" fill="rgba(124,58,237,0.35)" />
-  <circle id="op-eq-1" r="4" fill="url(#particleGlow)" />
-  <circle id="op-eq-2" r="3" fill="url(#particleGlow)" />
-  <circle id="op-eq-3" r="2.5" fill="url(#particleGlow)" />
-  <circle id="op-30-1" r="3.5" fill="url(#particleGlow)" />
-  <circle id="op-30-2" r="2" fill="url(#particleGlow)" />
+  <circle id="op-eq-1" r="4" fill="url(#hds-particleGlow)" />
+  <circle id="op-eq-2" r="3" fill="url(#hds-particleGlow)" />
+  <circle id="op-eq-3" r="2.5" fill="url(#hds-particleGlow)" />
+  <circle id="op-30-1" r="3.5" fill="url(#hds-particleGlow)" />
+  <circle id="op-30-2" r="2" fill="url(#hds-particleGlow)" />
   <circle id="op-60-1" r="3" fill="rgba(168,85,247,0.8)" />
   <circle id="op-60-2" r="2.5" fill="rgba(168,85,247,0.6)" />
   <circle cx="340" cy="180" r="6" fill="rgba(0,245,255,0.15)" style="filter: blur(3px);" />
