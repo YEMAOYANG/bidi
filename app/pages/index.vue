@@ -493,7 +493,7 @@ function animateParticles() {
     <div class="section-divider" />
 
     <!-- ═══════════════════ PRICING ═══════════════════ -->
-    <section id="price" class="relative py-24 lg:py-32 overflow-hidden" style="background: var(--bg-void);">
+    <section id="price" class="relative py-24 lg:py-32 overflow-hidden" style="background: #030712;">
       <UContainer class="relative z-10">
         <!-- Header -->
         <div class="text-center mb-10 reveal">
@@ -506,24 +506,23 @@ function animateParticles() {
           <p class="section-subtitle">{{ page.pricing.description }}</p>
         </div>
 
-        <!-- Snap scroll container (mobile) / Grid (tablet+desktop) -->
+        <!-- Snap scroll (mobile) / Grid (tablet+desktop) -->
         <div ref="pricingScroll" class="pricing-scroll reveal">
           <UCard
             v-for="(plan, i) in page.pricing.plans"
             :key="plan.name"
+            :ui="{
+              root: 'relative',
+              header: '',
+              body: 'p-0',
+              footer: '',
+            }"
             :class="['pricing-card', { 'pricing-card--hot': plan.popular }]"
-            :ui="{ base: '', background: '', ring: '', shadow: '', body: { padding: '' }, rounded: '' }"
           >
-            <!-- Hot badge -->
-            <UBadge
-              v-if="plan.popular"
-              color="primary"
-              variant="solid"
-              size="xs"
-              class="pricing-badge"
-            >
+            <!-- Hot badge — 自定义 div, 不用 UBadge -->
+            <div v-if="plan.popular" class="pricing-badge">
               {{ t('pricing.popular') }}
-            </UBadge>
+            </div>
 
             <!-- Plan period -->
             <p class="plan-period">{{ plan.name }}</p>
@@ -563,7 +562,7 @@ function animateParticles() {
               :variant="plan.popular ? 'solid' : 'outline'"
               block
               size="lg"
-              class="plan-cta"
+              :class="['plan-cta', !plan.popular && 'plan-cta--ghost']"
               to="#download"
             >
               {{ t('pricing.downloadPlan') }}
