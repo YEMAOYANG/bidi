@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 
-
 const { t } = useI18n()
 
 /* ── SEO ── */
@@ -228,20 +227,14 @@ function animateParticles() {
                 href="#download"
                 class="btn-primary btn-lg"
               >
-                <SvgApple
-                  class="w-5 h-5"
-                  :font-controlled="false"
-                />
+                <SvgApple class="w-5 h-5" />
                 {{ t('download.ios') }}
               </a>
               <a
                 href="#download"
                 class="btn-secondary btn-lg"
               >
-                <SvgGooglePlay
-                  class="w-5 h-5"
-                  :font-controlled="false"
-                />
+                <SvgGooglePlay class="w-5 h-5" />
                 {{ t('download.android') }}
               </a>
             </div>
@@ -250,10 +243,7 @@ function animateParticles() {
             <p
               class="flex items-center gap-2 text-sm text-token-tertiary anim-fade anim-delay-600"
             >
-              <SvgCheckBadge
-                class="h-4 w-4 text-token-success"
-                :font-controlled="false"
-              />
+              <SvgCheckBadge class="h-4 w-4 text-token-success" />
               {{ t('download.guarantee') }}
             </p>
           </div>
@@ -261,10 +251,7 @@ function animateParticles() {
           <!-- Right: Data Flow Sphere SVG (§12) -->
           <div class="relative flex items-center justify-center anim-scale anim-delay-200">
             <div class="hero-vis-wrap w-full max-w-[560px] mx-auto">
-              <SvgHeroDataSphere
-                class="w-full h-auto"
-                :font-controlled="false"
-              />
+              <SvgHeroDataSphere class="w-full h-auto" />
             </div>
           </div>
         </div>
@@ -322,69 +309,60 @@ function animateParticles() {
           <!-- Speed -->
           <div class="glass-card feature-card feature-card--speed reveal">
             <div class="feature-icon feature-icon--speed">
-              <SvgFeatureSpeed
-                class="w-7 h-7"
-                :font-controlled="false"
-              />
+              <SvgFeatureSpeed class="w-7 h-7" />
             </div>
             <h3 class="mb-3 text-xl font-bold text-token-white">
-              {{ page.features.items[0].title }}
+              {{ page.features.items[0]?.title }}
             </h3>
             <p class="text-base leading-relaxed text-token-secondary">
-              {{ page.features.items[0].description }}
+              {{ page.features.items[0]?.description }}
             </p>
             <div
-              v-if="page.features.items[0].advantage"
+              v-if="page.features.items[0]?.advantage"
               class="feature-link"
             >
-              <span>{{ page.features.items[0].advantage }}</span>
-              <SvgArrowRight :font-controlled="false" />
+              <span>{{ page.features.items[0]?.advantage }}</span>
+              <SvgArrowRight />
             </div>
           </div>
 
           <!-- Secure -->
           <div class="glass-card feature-card feature-card--secure reveal">
             <div class="feature-icon feature-icon--secure">
-              <SvgFeatureShield
-                class="w-7 h-7"
-                :font-controlled="false"
-              />
+              <SvgFeatureShield class="w-7 h-7" />
             </div>
             <h3 class="mb-3 text-xl font-bold text-token-white">
-              {{ page.features.items[1].title }}
+              {{ page.features.items[1]?.title }}
             </h3>
             <p class="text-base leading-relaxed text-token-secondary">
-              {{ page.features.items[1].description }}
+              {{ page.features.items[1]?.description }}
             </p>
             <div
-              v-if="page.features.items[1].advantage"
+              v-if="page.features.items[1]?.advantage"
               class="feature-link text-token-purple-400"
             >
-              <span>{{ page.features.items[1].advantage }}</span>
-              <SvgArrowRight :font-controlled="false" />
+              <span>{{ page.features.items[1]?.advantage }}</span>
+              <SvgArrowRight />
             </div>
           </div>
 
           <!-- Global -->
           <div class="glass-card feature-card feature-card--global reveal">
             <div class="feature-icon feature-icon--global">
-              <SvgFeatureGlobe
-                class="w-7 h-7"
-                :font-controlled="false"
-              />
+              <SvgFeatureGlobe class="w-7 h-7" />
             </div>
             <h3 class="mb-3 text-xl font-bold text-token-white">
-              {{ page.features.items[2].title }}
+              {{ page.features.items[2]?.title }}
             </h3>
             <p class="text-base leading-relaxed text-token-secondary">
-              {{ page.features.items[2].description }}
+              {{ page.features.items[2]?.description }}
             </p>
             <div
-              v-if="page.features.items[2].advantage"
+              v-if="page.features.items[2]?.advantage"
               class="feature-link text-token-blue-400"
             >
-              <span>{{ page.features.items[2].advantage }}</span>
-              <SvgArrowRight :font-controlled="false" />
+              <span>{{ page.features.items[2]?.advantage }}</span>
+              <SvgArrowRight />
             </div>
           </div>
         </div>
@@ -420,10 +398,7 @@ function animateParticles() {
               class="advantage-item reveal"
             >
               <div class="advantage-check">
-                <SvgAdvantageCheck
-                  class="h-4 w-4 text-token-cyan-500"
-                  :font-controlled="false"
-                />
+                <SvgAdvantageCheck class="h-4 w-4 text-token-cyan-500" />
               </div>
               <div>
                 <h3 class="mb-1 text-lg font-bold text-token-white">
@@ -438,10 +413,7 @@ function animateParticles() {
 
           <!-- Right: Shield visualization -->
           <div class="reveal flex justify-center">
-            <SvgAdvantagesShieldVisual
-              class="w-full max-w-[400px]"
-              :font-controlled="false"
-            />
+            <SvgAdvantagesShieldVisual class="w-full max-w-[400px]" />
           </div>
         </div>
       </UContainer>
@@ -621,10 +593,7 @@ function animateParticles() {
               href="#"
               class="store-btn"
             >
-              <SvgApple
-                class="h-8 w-8 text-token-white"
-                :font-controlled="false"
-              />
+              <SvgApple class="h-8 w-8 text-token-white" />
               <div class="text-left">
                 <div class="store-line-caption text-token-tertiary">Download on the</div>
                 <div class="text-lg font-bold text-token-white">App Store</div>
@@ -634,10 +603,7 @@ function animateParticles() {
               href="#"
               class="store-btn"
             >
-              <SvgGooglePlayColored
-                class="w-8 h-8"
-                :font-controlled="false"
-              />
+              <SvgGooglePlayColored class="w-8 h-8" />
               <div class="text-left">
                 <div class="store-line-caption text-token-tertiary">Get it on</div>
                 <div class="text-lg font-bold text-token-white">Google Play</div>

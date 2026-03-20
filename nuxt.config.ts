@@ -137,10 +137,13 @@ export default defineNuxtConfig({
   svgo: {
     // 启用 TypeScript 声明文件生成
     dts: true,
-    // 自动导入路径
-    autoImportPath: '~/assets/svg/',
-    // 自动导入组件前缀
-    componentPrefix: 'icon',
+    // 相对 srcDir（Nuxt 4 多为 app/），避免 ~/ 在模块回退路径中解析异常
+    autoImportPath: './assets/icons/',
+    // 与模板中 <SvgXxx /> 一致（icon 前缀会生成 IconXxx，无法解析 SvgXxx）
+    componentPrefix: 'svg',
+    // 默认 componentext 会用 NuxtIcon 包一层 SVG，与 @nuxt/icon 的 NuxtIcon 冲突，
+    // SSR 会退化成未知标签（如 <svgapple>），客户端却是 <svg>，导致水合失败。
+    defaultImport: 'component',
     // SVGO 优化配置
     svgoConfig: {
       plugins: [
