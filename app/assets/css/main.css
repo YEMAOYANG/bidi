@@ -4,77 +4,439 @@
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'Inter', 'Public Sans', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  /* Aurora Color System */
+  --color-aurora-cyan: #00f5ff;
+  --color-aurora-purple: #7c3aed;
+  --color-aurora-blue: #2563eb;
+  --color-aurora-green: #00ff88;
+  --color-aurora-pink: #f472b6;
+  --color-deep-space: #030712;
+  --color-space-1: #050b1a;
+  --color-space-2: #0a1628;
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
 }
 
-/* 自定义主题色 */
 :root {
-  --ui-primary: #090D16;
+  --ui-primary: #00f5ff;
 }
 
 .dark {
-  --ui-primary: #090D16;
-  --ui-bg: var(--ui-color-neutral-950);
-  --ui-bg-muted: var(--ui-color-neutral-900);
-  --ui-bg-elevated: var(--ui-color-neutral-900);
-  --ui-bg-accented: var(--ui-color-neutral-800);
+  --ui-primary: #00f5ff;
+  --ui-bg: #030712;
+  --ui-bg-muted: #050b1a;
+  --ui-bg-elevated: #0a1628;
+  --ui-bg-accented: #0f1f3d;
 }
 
-/* 平滑滚动 */
 html {
   scroll-behavior: smooth;
 }
 
-/* 渐变按钮样式 - 全局可复用 */
-.btn-gradient {
+/* ===== GLOBAL BODY ===== */
+body {
+  background: #030712;
+  color: #fff;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.text-gradient-aurora {
+  background: linear-gradient(135deg, #00f5ff 0%, #7c3aed 50%, #00ff88 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(90deg, #60a5fa 0%, #00f5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.3), 0 0 60px rgba(0, 245, 255, 0.1);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.15);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 30px rgba(0, 245, 255, 0.8), 0 0 60px rgba(0, 245, 255, 0.4);
+}
+
+/* ===== GLASS MORPHISM ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 245, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 245, 255, 0.1), 0 0 0 1px rgba(0, 245, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== AURORA BUTTONS ===== */
+.btn-aurora {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #7027F5 0%, #53EEE5 100%) !important;
-  border: none !important;
-  color: white !important;
-  font-weight: 500;
-  box-shadow: 0 4px 15px rgba(112, 39, 245, 0.3) !important;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #00f5ff 0%, #7c3aed 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.35), 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-gradient:hover {
+.btn-aurora::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-aurora:hover {
+  box-shadow: 0 0 50px rgba(0, 245, 255, 0.5), 0 8px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.btn-aurora:hover::before {
+  opacity: 1;
+}
+
+.btn-aurora:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-outline-glow {
+  background: transparent;
+  border: 1px solid rgba(0, 245, 255, 0.5);
+  color: #00f5ff;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.15), inset 0 0 15px rgba(0, 245, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-outline-glow:hover {
+  background: rgba(0, 245, 255, 0.1);
+  border-color: #00f5ff;
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.3), inset 0 0 20px rgba(0, 245, 255, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(112, 39, 245, 0.4) !important;
-  background: linear-gradient(135deg, #7027F5 0%, #53EEE5 100%) !important;
 }
 
-.btn-gradient:active {
+/* ===== NEON BADGE ===== */
+.neon-badge {
+  background: rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.3);
+  color: #00f5ff;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.15), inset 0 0 10px rgba(0, 245, 255, 0.05);
+}
+
+.neon-badge-dot {
+  background: #00ff88;
+  box-shadow: 0 0 8px #00ff88, 0 0 15px rgba(0, 255, 136, 0.5);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 8px #00ff88, 0 0 15px rgba(0, 255, 136, 0.5); }
+  50% { box-shadow: 0 0 15px #00ff88, 0 0 30px rgba(0, 255, 136, 0.8); }
+}
+
+/* ===== ANIMATED GRID ===== */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(0, 245, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 245, 255, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+/* ===== FLOATING ORBS ===== */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: orb-float 8s ease-in-out infinite;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  animation-delay: 0s;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 245, 255, 0.2) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  animation-delay: -4s;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.12) 0%, transparent 70%);
+  top: 30%;
+  left: 20%;
+  animation-delay: -2s;
+  animation-duration: 12s;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ===== SECTION DIVIDERS ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.3), transparent);
+}
+
+/* ===== FEATURE CARDS ICON ===== */
+.feature-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: rgba(0, 245, 255, 0.08);
+  border: 1px solid rgba(0, 245, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.08);
+}
+
+.glass-card:hover .feature-icon-wrap {
+  background: rgba(0, 245, 255, 0.15);
+  border-color: rgba(0, 245, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+}
+
+/* ===== NEON CHECK ICON ===== */
+.neon-check {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 255, 136, 0.12);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(0, 255, 136, 0.2);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ===== PRICING CARDS ===== */
+.price-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,245,255,0.04) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.price-card:hover {
+  border-color: rgba(0, 245, 255, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 245, 255, 0.08);
+}
+
+.price-card:hover::before {
+  opacity: 1;
+}
+
+.price-card-popular {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.25) 0%, rgba(0, 245, 255, 0.1) 100%);
+  border: 1px solid rgba(124, 58, 237, 0.5);
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.2), 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.price-card-popular:hover {
+  border-color: rgba(0, 245, 255, 0.6);
+  box-shadow: 0 0 60px rgba(124, 58, 237, 0.3), 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== SCANNING LINE ===== */
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+  animation: scan 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes scan {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ===== PARTICLES ===== */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: particle-float linear infinite;
+  opacity: 0;
+}
+
+@keyframes particle-float {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100px) scale(1); opacity: 0; }
+}
+
+/* ===== HERO TITLE ANIMATION ===== */
+.hero-title-line {
+  overflow: hidden;
+}
+
+.hero-title-inner {
+  animation: slide-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.hero-title-inner:nth-child(2) { animation-delay: 0.15s; }
+.hero-title-inner:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes slide-up {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-fade-in {
+  opacity: 0;
+  animation: fade-in 0.8s ease forwards;
+}
+.hero-fade-in-1 { animation-delay: 0.5s; }
+.hero-fade-in-2 { animation-delay: 0.7s; }
+.hero-fade-in-3 { animation-delay: 0.9s; }
+
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
   transform: translateY(0);
 }
 
-/* 确保按钮内文字颜色为白色 */
-.btn-gradient * {
-  color: white !important;
+/* ===== COUNTER ANIMATION ===== */
+.stat-number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
 }
 
-/* 下载按钮绿色渐变（覆盖 UButton 默认样式） */
-.btn-download {
-  background: linear-gradient(-90deg, #01ac54 0%, #03de6d 100%) !important;
-  border: none !important;
-  box-shadow: 0 4px 15px rgba(1, 172, 84, 0.35);
-  color: white !important;
+/* ===== DOWNLOAD SECTION ===== */
+.download-bg {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(124, 58, 237, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #030712 0%, #050b1a 100%);
 }
-.btn-download:hover {
-  background: linear-gradient(-90deg, #01ac54 0%, #03de6d 100%) !important;
-  box-shadow: 0 6px 20px rgba(1, 172, 84, 0.45);
+
+.app-badge {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s;
 }
-.btn-download * {
-  color: white !important;
+
+.app-badge:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* ===== NUMBER HIGHLIGHT ===== */
+.stat-item {
+  position: relative;
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+}
+
+/* ===== SECTION TITLES ===== */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00f5ff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: #00f5ff;
+  opacity: 0.6;
 }
