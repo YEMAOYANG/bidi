@@ -380,6 +380,8 @@ body {
   text-align: center;
   transition: all var(--duration-base) var(--ease-out);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .pricing-card:hover {
   border-color: var(--border-hover);
@@ -388,10 +390,9 @@ body {
 }
 /* Hot / Popular card */
 .pricing-card--hot {
-  background: linear-gradient(180deg, rgba(0,245,255,0.04) 0%, var(--bg-surface) 40%);
+  background: linear-gradient(180deg, rgba(0,245,255,0.06) 0%, var(--bg-surface) 50%);
   border-color: transparent;
-  transform: scale(1.03);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-glow), 0 0 40px rgba(0,245,255,0.12);
   z-index: 1;
 }
 .pricing-card--hot::before {
@@ -406,8 +407,8 @@ body {
   mask-composite: exclude;
 }
 .pricing-card--hot:hover {
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 0 50px var(--cyan-glow), var(--shadow-xl);
+  transform: translateY(-4px);
+  box-shadow: 0 0 60px var(--cyan-glow-strong), var(--shadow-xl);
 }
 .pricing-badge {
   position: absolute;
@@ -643,4 +644,22 @@ body {
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+}
+
+/* ── PRICING MOBILE ── */
+@media (max-width: 640px) {
+  .pricing-card {
+    padding: var(--space-5) var(--space-4);
+  }
+  .pricing-value {
+    font-size: 2rem;
+  }
+  .btn-secondary {
+    font-size: 0.72rem;
+    padding: 0.65rem 0.5rem;
+  }
+  .btn-primary {
+    font-size: 0.72rem;
+    padding: 0.75rem 0.5rem;
+  }
 }

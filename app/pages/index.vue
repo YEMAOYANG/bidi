@@ -466,18 +466,18 @@ function animateParticles() {
           <p class="section-subtitle">{{ page.pricing.description }}</p>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-5xl mx-auto items-start reveal-stagger">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 max-w-5xl mx-auto items-stretch reveal-stagger">
           <div
             v-for="(plan, i) in page.pricing.plans"
             :key="plan.name"
-            class="relative reveal"
+            class="relative reveal h-full"
           >
             <!-- Popular badge -->
             <div v-if="plan.popular" class="absolute -top-5 left-0 right-0 flex justify-center z-10">
               <span class="pricing-badge">{{ t('pricing.popular') }}</span>
             </div>
 
-            <div :class="plan.popular ? 'pricing-card pricing-card--hot' : 'pricing-card'" :style="plan.popular ? 'padding-top: 2.5rem;' : ''">
+            <div :class="plan.popular ? 'pricing-card pricing-card--hot h-full flex flex-col' : 'pricing-card h-full flex flex-col'" :style="plan.popular ? 'padding-top: 2.5rem;' : ''">
               <!-- Plan name -->
               <div class="text-sm font-semibold uppercase tracking-wider mb-4" style="color: var(--text-tertiary); letter-spacing: 0.08em;">
                 {{ plan.name }}
@@ -494,7 +494,7 @@ function animateParticles() {
               <div class="h-px my-6" style="background: var(--border-subtle);" />
 
               <!-- Features -->
-              <div class="text-left space-y-2.5">
+              <div class="text-left space-y-2.5 flex-grow">
                 <div v-for="feat in pricingFeatures" :key="feat" class="flex items-center gap-2.5 text-sm" style="color: var(--text-secondary);">
                   <svg class="w-4 h-4 flex-shrink-0" style="color: var(--cyan-500);" fill="currentColor" viewBox="0 0 20 20">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
@@ -508,6 +508,7 @@ function animateParticles() {
                 href="#download"
                 class="block w-full text-center text-sm font-bold py-3 rounded-xl mt-6 transition-all duration-300"
                 :class="plan.popular ? 'btn-primary' : 'btn-secondary'"
+                style="white-space: nowrap; font-size: clamp(0.7rem, 2.5vw, 0.875rem);"
                 :style="plan.popular ? '' : 'padding: 0.75rem 1rem;'"
               >
                 {{ t('pricing.downloadPlan') }}
