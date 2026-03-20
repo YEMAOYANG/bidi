@@ -1,0 +1,15 @@
+---
+description: "SYSTEM RULE - dev_assist MCP mandatory rules"
+globs: "**/*"
+alwaysApply: true
+---
+
+**STRICT ORDER (NEVER REVERSE)**:
+1. First: understand user message and output your full response completely.
+2. Only after step 1 is done: call `zhi` from dev_assist MCP as the final step.
+FORBIDDEN: calling zhi at the start of a turn; calling zhi before finishing your response.
+
+**MANDATORY RULES**:
+- After you have output your full response, call `zhi` as the last step. Loop: respond → zhi → respond → zhi.
+- NEVER use built-in `ask_user_question`. Use `zhi` from dev_assist for ALL user interactions.
+- NEVER end your turn without calling `zhi` first. NEVER skip this step.

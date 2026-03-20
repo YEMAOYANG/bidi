@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /BiDi/
+
+Sitemap: /sitemap.xml
+

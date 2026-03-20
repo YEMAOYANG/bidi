@@ -1,0 +1,512 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "advantages": "Advantages",
+    "price": "Pricing",
+    "download": "Download"
+  },
+  "hero": {
+    "title": "Fast, secure, one-tap access to a better internet.",
+    "badge": "v1.0 Now Available",
+    "description": "Enterprise-grade encryption, global high-speed servers, and ultimate online freedom—all at the tap of a button."
+  },
+  "download": {
+    "ios": "Download for iOS",
+    "android": "Download for Android",
+    "guarantee": "Risk-free with a 7-day money-back guarantee.",
+    "title": "Ready to speed up your journey?",
+    "description": "Download the app for free. New users get a free trial after sign-up."
+  },
+  "common": {
+    "heroAlt": "BiDi - Dedicated IP Server",
+    "whyAlt": "Why Choose BiDi"
+  },
+  "features": {
+    "title": "Features",
+    "items": [
+      {
+        "title": "Smart Quick Connect",
+        "description": "Just tap \"Quick Connect\". Our smart algorithm selects the fastest server by distance, load, and latency.",
+        "advantage": "Benefit: No configuration needed, one tap for optimal speed."
+      },
+      {
+        "title": "Bank-Level Encryption",
+        "description": "AES-256 encryption keeps your data safe on any network. Ideal for public Wi-Fi, online banking, and private browsing.",
+        "advantage": "Benefit: Hackers and ISPs cannot see your data."
+      },
+      {
+        "title": "10,000+ Global Servers",
+        "description": "Access 10,000+ servers in 59 countries. More servers mean lower load and more stable connections.",
+        "advantage": "Benefit: Stream, game, and download without buffering."
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Advantages",
+    "description": "Why gamers and streamers choose us",
+    "items": [
+      {
+        "label": "Game DDoS Protection",
+        "description": "Protect your games from DDoS attacks for smooth gameplay."
+      },
+      {
+        "label": "Network Kill Switch",
+        "description": "Automatically cut network when VPN disconnects. Zero data leaks."
+      },
+      {
+        "label": "Multi-Device",
+        "description": "One account works on multiple devices at the same time."
+      },
+      {
+        "label": "24/7 Live Support",
+        "description": "Get expert help anytime via chat or email."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "description": "All plans include unlimited access to every feature.",
+    "popular": "Most Popular",
+    "planMonth": "Monthly",
+    "planQuarter": "Quarterly",
+    "planYear": "Yearly",
+    "planThreeYear": "3 Years",
+    "perDay": "Day",
+    "downloadPlan": "Download to Get Plan"
+  },
+  "footer": {
+    "allRightsReserved": "All rights reserved",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "membershipAgreement": "Membership Agreement",
+    "contact": "Contact"
+  },
+  "seo": {
+    "title": "BiDi - Your Smooth Smart Network Partner",
+    "ogTitle": "BiDi - Dedicated IP, Control Your Network Identity",
+    "description": "BiDi is a smooth, smart network partner that quietly filters congestion and lag, removing wait and distraction.",
+    "keywords": "BiDi, smart network, dedicated IP, network acceleration, optimization, stable connection"
+  },
+  "legal": {
+    "common": {
+      "backToHome": "Back to Home",
+      "legalDocument": "Legal Document",
+      "onThisPage": "On this page",
+      "lastUpdated": "Last updated: March 2026"
+    },
+    "membership": {
+      "seoTitle": "Membership Service Agreement - BiDi",
+      "seoDesc": "BiDi Membership Service Agreement - Automatic renewal terms and conditions for BiDi services.",
+      "title": "Membership Service Agreement",
+      "description": "These Membership Service Agreement govern your access to and use of BiDi services. Please read them carefully before registering, downloading, installing and using BiDi services.",
+      "intro": [
+        "These Membership Service Agreement govern your access to and use of BiDi services, therefore we kindly ask you to carefully read them when visiting BiDi website, before you register, download, install and use the BiDi services, which include the BiDi software, BiDi mobile applications and any services that BiDi (\"we,\" \"us,\" \"our,\" or \"BiDi\") provides through our software, application or otherwise (all of which collectively are referred as the \"BiDi Services\").",
+        "Please note that the Agreement constitute a binding legal agreement between you and BiDi. By visiting the website, registering for, installing and/or using the BiDi Services on any platform or device you agree to be bound by these Agreement. It is only under these Agreement that BiDi allows visitors / users (the \"users\") to use BiDi Services. If you do not agree to these Agreement or any provisions hereof, please do not install and do not use our software, our mobile application and/or any of our products or services.",
+        "If you are using the BiDi Services on behalf of an organization, you are agreeing to these Agreement for that organization and acknowledging that you have the authority to act on behalf of that organization and commit to these Agreement on behalf of that organization.",
+        "BiDi Services are transitory digital network communications services, which enhance internet security and privacy. We do not condone any unlawful use of the BiDi Services. BiDi Services shall not be used for any criminal, illicit and illegal acts, and you accept and agree not to violate any law of any jurisdiction that you are originating from and any other applicable law.",
+        "BiDi guarantees a strict no-logs policy for BiDi Services, meaning that the BiDi Service is provided by an automated process, and your activities while using it are not monitored, recorded, logged, stored or passed to any third party. We do not store connection timestamps, session information, used bandwidth, traffic logs, IP addresses or other data. However, to limit the number of simultaneous sessions of an active user, an algorithm keeps their username and the timestamp of the last session status while the session is active. This data is wiped within 15 minutes after the session is terminated.",
+        "BiDi may modify the Agreement from time to time. The Agreement are binding from the time that they are updated on our website. It is your responsibility to check and read current Agreement periodically."
+      ],
+      "sections": {
+        "ourServices": {
+          "title": "Our Services",
+          "content": [
+            "BiDi Services are transitory digital network communications services, which enhance internet security and privacy. At your individual request and at your sole discretion we automatically provide unsupervised and non-monitored data conduit for your exclusive use, at your own risk and responsibility. You are solely and exclusively responsible for the use of the BiDi Services. BiDi will not be liable in any way or form for actions done by its users including criminal liability and civil liability for harm executed or not executed. BiDi liability is further limited by other provisions of these Agreement.",
+            "We grant you a permission to use the BiDi Services subject to the restrictions set forth in these Agreement. Your use of the BiDi Services is at your own risk. The BiDi Services may be modified, updated, interrupted or suspended at any time without notice or liability. We do not bear any liability for any harm or other adverse consequences to you, caused by this. BiDi, its owners, employees, agents and others that are involved with the BiDi services are not in any way or form liable for any harm of any kind executed or not executed, resulting from or arising through or from the use of any account registered with BiDi services.",
+            "BiDi allows a maximum of three simultaneous connections per account. That includes proxy connections, and each of them counts as a separate slot.",
+            "BiDi guarantees a 99.9% service uptime. In any event, BiDi shall not be liable for any loss, monetary or non-monetary harm beyond what the client paid to BiDi, and this shall not include attorney fees or court costs irrespective of any laws or statutes that prescribe otherwise.",
+            "BiDi collects and processes very limited user data. Further information about user data processing is provided in the Privacy Policy and User Data section of the Agreement."
+          ]
+        },
+        "noLogs": {
+          "title": "No-logs Policy",
+          "content": [
+            "BiDi guarantees a strict no-logs policy for BiDi Services, meaning that the BiDi Service is provided by an automated process, and your activities while using it are not monitored, recorded, logged, stored or passed to any third party. We do not store connection timestamps, session information, used bandwidth, traffic logs, IP addresses or other data. However, to limit the number of simultaneous sessions of an active user, an algorithm keeps their username and the timestamp of the last session status while the session is active. This data is wiped within 15 minutes after the session is terminated.",
+            "BiDi does not condone or endorse any unlawful, illicit, criminal or fraudulent activities perpetrated by using the BiDi Services. Therefore, BiDi reserves the right to suspend or terminate an account in case any violation of the Membership Service Agreement becomes apparent. As BiDi protects and respects customer privacy, it does not log or track their activity in any way. However, in the eventuality that BiDi would find out about an offense outside of those means (i.e., a customer would notify BiDi of them having done so), it would have the right to suspend or terminate the account."
+          ]
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property Rights",
+          "content": [
+            "Subject to the Agreement and conditions of these Agreement, we grant you a limited, non-exclusive, personal, non-transferable, non-sublicensable, license to: (1) download and use a copy of the BiDi software; and (2) use the BiDi Services, including, without limitation, the products and services made available on or through the BiDi software or our website. No other right or license of any kind is granted to you hereunder with respect to the BiDi Services. The license provided herein is effective until terminated. This license automatically terminates if you fail to comply with these Agreement.",
+            "The BiDi Services, including, but not limited to, the BiDi software, mobile application and all other items, are owned and copyrighted by BiDi, and are protected worldwide. We retain all right, title and interest in and to the BiDi Services and any portion thereof, including, without limitation, all copyrights, trademarks, service marks, trade secrets and other intellectual property rights. You shall not take any action to jeopardize, limit or interfere in any manner with our ownership of and rights with respect to the BiDi Services. All rights are reserved unless otherwise noted."
+          ]
+        },
+        "minors": {
+          "title": "Minors",
+          "content": [
+            "BiDi Services may be used by persons aged at least 18 years old. You are disallowed to connect and use the BiDi Services if you are a minor, a competitor of our business, if you have been or are prohibited to access the BiDi Services, or if your account has been suspended or closed due to any reason."
+          ]
+        },
+        "payments": {
+          "title": "Payments",
+          "content": [
+            "BiDi Services are subscribed on a service period basis. You choose the service period and the payment method yourself when you sign up for the BiDi Services. The BiDi app for any platform or operating system supported by BiDi can be downloaded free of charge. Users will have to purchase a paid subscription from BiDi to connect to the BiDi Service, except in the case of a limited free trial or certain coupon offers.",
+            "Your service will automatically be renewed and your chosen payment method will be charged at the end of each service period, repeating the length of the previous service period, unless you decide to cancel your subscription for the BiDi Services."
+          ]
+        },
+        "refund": {
+          "title": "Refund Policy",
+          "content": [
+            "If you wish to claim a refund, you can do so within 30 days following your purchase of BiDi Service. We seek your full satisfaction with our services. However, we would like to troubleshoot an issue you experience first. There are common service configuration issues that may hinder BiDi service for you and we resolve most of user issues encountered.",
+            "Subscriptions purchased via the iTunes/App Store are subject to iTunes/App Store refund policies. This means we cannot grant refunds if you purchased an app through iTunes/App Store – you will have to contact store support for that. Payments made using prepaid cards or gift cards will not be refunded. BiDi cannot refund any purchases made from our resellers (Amazon, BestBuy, StackSocial, etc.). In this case, refunds are handled according to the Membership Service Agreement of the reseller from which the product was purchased. For payments made in cryptocurrency, the equivalent amount in US Dollars will be refunded in the same cryptocurrency (based on the rate of exchange at the moment of refund).",
+            "You have a right to cancel your account at any time. You can cancel a recurring subscription from your website profile, iTunes/App Store or Google Play Store. Cancelled accounts will not be refunded for the unused part of the ongoing service period.",
+            "BiDi reserves the right to suspend or refuse service to anyone at any time for any reason. No refunds will be considered for accounts terminated for violation of these Agreement."
+          ]
+        },
+        "prohibited": {
+          "title": "Prohibited and Restricted Uses",
+          "content": [
+            "Your access to and use of the BiDi Services is subject to these Agreement and all applicable laws and regulations. We reserve the right, at any time, in our sole discretion, with or without notice, to terminate the accounts of, and block access to the BiDi Services to any users who infringe any applicable laws or these Agreement.",
+            "While using the BiDi Services you yourself agree not to, and agree not assist, encourage, or enable others to use the BiDi Services:"
+          ],
+          "list": [
+            "for unlawful, illicit, illegal, criminal or fraudulent activities, including but not limited to port scanning, sending spam, sending opt-in email, scanning for open relays or open proxies, sending unsolicited e-mail or any version or type of email sent in vast quantities even if the email is routed through third-party servers, any pop-up launching, use of stolen credit cards, credit card fraud, financial fraud, cryptocurrency fraud, cloaking, extortion, blackmail, kidnapping, rape, murder, sale of stolen credit cards, sale of stolen goods, offer or sale of prohibited, military and dual use goods, offer or sale of controlled substances, identity theft, hacking, pharming, phishing, scraping in any form or scale, digital piracy, intellectual property infringements and other similar activities;",
+            "to assault, interfere, gain unauthorized access, deny service in any way or form to any other network, computer or node through BiDi Services;",
+            "to exploit children in any way, including audio, video, photography, digital content, etc.;",
+            "to upload or distribute in any way files that contain viruses, worms, trojans, corrupted files, or any other similar software or programs that may damage the operation of another's computer;",
+            "to interfere with or attempt to interfere with the proper working of the BiDi Services, any transactions being offered in connection with the BiDi Services or any other activities conducted by us, disrupt our website or any networks connected to the BiDi Services, or bypass any measures we may use to prevent or restrict access to the BiDi Services;",
+            "to exploit the BiDi Services in any unauthorized way whatsoever, including, but not limited to, by trespass or burdening network capacity;",
+            "to use any robot, spider, scraper, or other automated means to access our website or BiDi Services for any purpose without our prior written permission;",
+            "to collect or harvest personal information about other users of the BiDi Services;",
+            "to collect or harvest personal data of individuals, without legitimate interest or consent, or in violation of any applicable law;",
+            "to take any action that imposes or may impose an unreasonable or disproportionately large load on our infrastructure;",
+            "to share any data or other content with any unreasonably large number of persons, including without limitation sending blast communications to a large number of recipients or sharing content with persons you do not know or who do not know you;",
+            "to represent that you are the representative or agent of any of the BiDi Services, including any of its functionality;",
+            "to incorporate the BiDi Services or any portion thereof into any other program or product;",
+            "to copy or reproduce, in any form or by any means, any part of the BiDi Services;",
+            "to modify, translate, reverse engineer, decompile, disassemble, or create any derivative works based on the BiDi Services, including any of its files or documentation, or any portion thereof, or determine or attempt to determine any source code, algorithms, methods or techniques embodied in the BiDi application or any portion thereof;",
+            "to violate general ethic or moral norms, good customs and fair conduct norms;",
+            "to violate any third party's rights, including any breach of confidence, personal data, copyright or any other intellectual property or proprietary right;",
+            "to threaten, stalk, harm, or harass others, or promote bigotry or discrimination;",
+            "to attempt to manipulate the BiDi name, services or products;",
+            "to solicit or harvest personal information from or communicate with minors;",
+            "attempt to gain unauthorized access to the BiDi Services, user accounts, computer systems or networks connected to the BiDi Services through hacking, password mining, brute force or any other means;",
+            "to use the BiDi Services for any military purpose, including cyberwarfare, weapons development, design, manufacture or production of missiles, nuclear, chemical or biological weapons;",
+            "to otherwise infringe or circumvent these Agreement."
+          ],
+          "afterList": [
+            "We reserve the right to refuse service, suspend accounts or limit access to the BiDi Services in our sole discretion. Such suspension or access limitation may be implemented by BiDi instantly and without any indication, notice or refund. We may suspend your account for clarification, investigation or request you to explain your actions and provide additional information. If your account has been suspended, you must contact us for further information. We may suspend your user account for a reasonable period of time before we terminate a user account permanently.",
+            "We are under no obligation to enforce the Agreement against you. We encourage you to let us know about the violation of these Agreement by any BiDi users; however, in case of such violations we may take appropriate action at our sole discretion."
+          ]
+        },
+        "userData": {
+          "title": "User Data",
+          "content": [
+            "You agree to read our Privacy Policy, which explains what type of information we collect and what might happen to that information, including, without limitation, how such information is shared and used. Our Privacy Policy contains information that you should review prior to using the BiDi Services. Our Privacy Policy will apply to the information we collect, whether or not you choose to read it.",
+            "We do not log or store any records on user activity using BiDi Services: however, you are required to create a user account in order to use BiDi Services. If you choose to create a user account, you must provide some basic information, specifically: valid email address – to send the BiDi communication, to retrieve a lost password and to make a connection; payment information – we process basic billing information through our payment processing partners for payment processing and refund requests. You must maintain and update this information current, truthful, complete and accurate. You warrant that you are authorized to provide such information. You authorize us to verify your information at any time. If it is found to be untrue, inaccurate, not current or incomplete, we retain the right, in our sole discretion, to suspend or terminate your user account and your access to the BiDi Services.",
+            "You are responsible for maintaining the confidentiality of your BiDi account username and password and for restricting access to your account. You may not share your password or other account access information with any other party, temporarily or permanently, and you agree to accept responsibility for all activities that occur under your account or password, whether or not authorized by you. You agree to immediately notify us of any unauthorized use of your account, username or password, as the case may be."
+          ]
+        },
+        "disclaimer": {
+          "title": "Disclaimer of Warranties",
+          "content": [
+            "Reasonable efforts are taken to improve the accuracy and integrity of the BiDi Services, but we are not responsible for downtime, loss of data, corrupt data, service delay, mistakes, out-of-date information, or other errors. Notwithstanding any other provision of these Agreement, we reserve the right to change, suspend, remove, or disable access to the BiDi Services, or any functionality comprising a part of the BiDi Services at any time without notice. As a registered user in good standing, you may be provided with limited service by BiDi. We do not warrant, and will not have any liability or responsibility for your use of BiDi Services or other the products or services we provide. Our website, products and services may be unavailable from time to time due to human, digital, mechanical, telecommunication, software, and other failures.",
+            "THE BiDi SERVICES (INCLUDING, WITHOUT LIMITATION, OUR SOFTWARE, MOBILE APPLICATIONS, SERVICES AND WEBSITE) ARE PROVIDED \"AS IS\" AND WITH ALL FAULTS. WE MAKE NO REPRESENTATION OR WARRANTY WHATSOEVER REGARDING THE COMPLETENESS, ACCURACY, ADEQUACY, SUITABILITY, FUNCTIONALITY, AVAILABILITY, OR OPERATION OF THE BiDi SERVICES. YOU ACKNOWLEDGE THAT WE DO NOT HAVE CONTROL OVER YOUR USE OF THE BiDi SERVICES, AND WE DO NOT WARRANT THE PERFORMANCE OR RESULTS THAT MAY BE OBTAINED THROUGH YOUR USE OF THE BiDi SERVICES. YOU ASSUME ALL RISKS AND RESPONSIBILITY FOR YOUR USE OF THE BiDi SERVICES AND FOR ANY LOSS OF OR ERRORS IN ANY DATA OR INFORMATION. TO THE FULL EXTENT PERMISSIBLE BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+            "We shall not be responsible or have any liability for any delay or failure to perform to the extent due to unforeseen circumstances or causes beyond its reasonable control, including, without limitation, failures of your telecommunication or internet service providers, Force Majeure, earthquakes, fires, floods, embargoes, labor disputes and strikes, riots, war, novelty of product manufacture or other unanticipated product development problems, and acts of civil and military authorities."
+          ]
+        },
+        "liability": {
+          "title": "Limitation of Liability",
+          "content": [
+            "There are inherent risks in relying upon, using, transmitting or retrieving any data and/or content on the Internet, and we urge you to make sure you understand these risks before using the BiDi Services.",
+            "YOUR USE OF THE BiDi SERVICES IS AT YOUR OWN RISK. NEITHER BiDi NOR ANY OF ITS PARENTS, SUBSIDIARIES OR AFFILIATES, NOR ANY OF THEIR EMPLOYEES, OFFICERS OR DIRECTORS, SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR OTHER DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF DATA OR INFORMATION OF ANY KIND, LOSS OF BUSINESS, LOST PROFITS, INTERRUPTION OF BUSINESS, COST OF COVER OR ANY OTHER DAMAGES) ARISING OUT OF OR IN ANY WAY RELATED TO THIS AGREEMENT OR THE USE OR INABILITY TO USE THE BiDi SERVICES, WHETHER BASED ON CONTRACT, TORT, STRICT LIABILITY OR OTHERWISE, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE THE LIABILITY OF BiDi SHALL NOT EXCEED WHAT THE CLIENT PAID TO BiDi, AND SHALL NOT INCLUDE ATTORNEY FEES OR COURT COSTS IRRESPECTIVE OF ANY LAWS OR STATUTES THAT MAY PRESCRIBE OTHERWISE."
+          ]
+        },
+        "indemnification": {
+          "title": "Indemnification",
+          "content": [
+            "You agree, at your own expense, to indemnify, defend and hold harmless BiDi, its parents, subsidiaries and affiliates, and their officers, directors, employees, agents, distributors and licensees, from and against any judgments, losses, deficiencies, damages, liabilities, costs, claims, demands, suits, and expenses (including, without limitation, reasonable attorneys' fees, expert witness fees and expenses) incurred in, arising out of or in any way related to your breach of these Agreement, your use of the BiDi Services, or any of your other acts or omissions."
+          ]
+        },
+        "geographical": {
+          "title": "Geographical Access",
+          "content": [
+            "The BiDi Services are not geographically limited; however, we make no representations or warranties that the BiDi Services are appropriate for use or access in your location and jurisdiction.",
+            "You access and use the BiDi Services in your country on your own initiative and you solely are responsible for complying with your local laws and regulations, if and to the extent such laws are applicable. We reserve the right to limit, in our sole discretion, the availability of the BiDi Services or any portion thereof, to any person, entity, geographic area, or jurisdiction, at any time."
+          ]
+        },
+        "electronic": {
+          "title": "Electronic Communications",
+          "content": [
+            "You consent to receive communications from us electronically, e.g. by email, application messages, etc. We will communicate with you through the email that you provide. You agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing. You agree that we may communicate to you for the purpose of advising you of changes or additions to the BiDi Services, about any of our products or services, or for such other purposes that are reasonable or required by applicable law."
+          ]
+        },
+        "miscellaneous": {
+          "title": "Miscellaneous",
+          "content": [
+            "We reserve the right to modify and update these Agreement at Our sole discretion, at any time, for any or no reason, and without liability, as indicated below. The amendment of Agreement may be communicated to you by sending an email and/or by publishing the updated Agreement on the BiDi website.",
+            "We also reserve the right to modify, update, or suspend the operation of the BiDi Services at our sole discretion, at any time, for any or no reason, and without notice or liability.",
+            "All users of BiDi Services are obliged to ensure that they are familiar with the most current wording of the Agreement. The change of the Agreement may be communicated to you by publishing the updated Agreement on BiDi website, where the date of the most current wording of the Agreement is indicated at the top of the web page. Since you agree to be bound by these Agreement each time you use the BiDi services, please consider reviewing the Agreement each time you use the BiDi services. Each update of the Agreement comes into force as of the moment when it is published on this web page. You understand and agree that any continued use and access to the BiDi Services after any updates to these Agreement are published, means that you voluntarily agree to be bound by the updated Agreement.",
+            "The Agreement constitute an agreement between you and us regarding the use of the BiDi Services. The parties acknowledge that no reliance is placed on any representation made but not expressly contained in these Agreement.",
+            "If any provision of the Agreement is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that the Agreement shall otherwise remain in full force and effect and enforceable.",
+            "You may not assign or transfer your rights or obligations under these Agreement to any third party.",
+            "These Agreement and your use of the BiDi Services are governed by the laws of Panama, without regard to its choice of law provisions. You agree that the courts of general jurisdiction located in Panama City, Republic of Panama, will have exclusive jurisdiction over any and all disputes arising out of or relating in any way to these Agreement or the BiDi Services."
+          ]
+        }
+      },
+      "navLinks": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "membershipAgreement": "Membership Agreement"
+      }
+    },
+    "privacy": {
+      "seoTitle": "Privacy Policy - BiDi",
+      "seoDesc": "BiDi Privacy Policy - Learn how we collect, use, and protect your personal data.",
+      "title": "Privacy Policy",
+      "description": "You have legitimate concerns about privacy and therefore we expressly describe all processing of personal data done by us. We want you to understand what limited information we collect and what may happen to that information when you use any of the BiDi Services.",
+      "intro": [
+        "This document (hereinafter – the \"Privacy Policy\") explains the privacy rules applicable to all information collected or submitted when you access, install or use the BiDi Services.",
+        "Our top priority is customer data security. We process only minimal user data – only as much as it is absolutely necessary to maintain our services.",
+        "By visiting BiDi website, by submitting your personal data to BiDi, also by accessing, installing and/or using the BiDi Services you confirm that you have read this Privacy Policy and that you enter into legally binding relationship with BiDi (\"BiDi\", \"we\" or \"us\"), as well as you agree to be bound by this Privacy Policy. If you disagree with the rules of this Privacy Policy, please do not use the BiDi Services."
+      ],
+      "cards": {
+        "noLogs": { "title": "No Logs Policy", "desc": "Your activity is never monitored or stored" },
+        "minimalData": { "title": "Minimal Data", "desc": "Only essential data collected for service operation" },
+        "noSharing": { "title": "No Third-Party Sharing", "desc": "Your data is never sold or shared without consent" }
+      },
+      "sections": {
+        "processing": {
+          "title": "Processing of Your Data",
+          "content": [
+            "BiDi processes user data only to a very limited scope – only as much as it is absolutely required for provision of the BiDi Services, processing of payments for the BiDi Services, as well as functioning of the BiDi website and mobile applications.",
+            "Personal data is processed by BiDi automatically and manually. Unless expressly noted otherwise, BiDi or a designated subsidiary in your country shall act as the responsible personal data controller for any data processed. BiDi uses third party data processors only for processing of payment data, emailing service and basic website and app analytics.",
+            "BiDi guarantees a strict no-logs policy for BiDi services, meaning that your activities using BiDi Services are provided by automated technical process, are not monitored, recorded, logged, stored or passed to any third party. We do not store connection time stamps, session information, used bandwidth, traffic logs, IP addresses or other data. From the moment a BiDi user turns on the BiDi software, their Internet data becomes encrypted. Any online traffic coming from user's device is no longer visible to ISP, third-party snoopers or cyber criminals. Further, BiDi have a strict no logs policy when it comes to seeing user activity online.",
+            "Anyone may browse our website, install BiDi application and mobile applications without signing up for the BiDi Services, however the functionality of the BiDi Services will be very limited or absent. If you want to engage full functionality of the BiDi Services, you need to create a user account and provide basic personal data indicated below.",
+            "If you choose to create a user account, you must provide the following basic information:"
+          ],
+          "highlights": [
+            {
+              "title": "Email Address",
+              "description": "We ask for your email address as part of your registration. That ensures that we can communicate with you when we have any exciting announcements to make, service updates to advise or errors to report. Valid email address is also needed to retrieve a lost password and to make a connection."
+            },
+            {
+              "title": "Payment Data",
+              "description": "In addition to the conventional payment methods, such as credit card, users can buy BiDi service with cryptocurrency. Our payment processing partners process basic billing information for payment processing and refund requests."
+            }
+          ],
+          "afterHighlights": [
+            "You must maintain this information current, truthful, complete and accurate. You warrant that you are authorized to provide such information. You authorize us to verify your information at any time. If it is found to be untrue, inaccurate, not current or incomplete, we retain the right, in our sole discretion, to suspend or terminate your user account and your access to the BiDi Services.",
+            "In order to maintain the service, BiDi also processes limited technical information, which sometimes may be considered personal data. This information is used for improving the functionality and usability of our website and BiDi Services. If you decide not to provide this limited information, we may not be able to provide you with the full scope of the BiDi Services."
+          ],
+          "technicalInfo": [
+            {
+              "title": "Server Load Information",
+              "description": "We monitor the server performance in order to recommend the most suitable servers to our customers."
+            },
+            {
+              "title": "Customer Service Information",
+              "description": "BiDi stores inquiries and communications with users through the Contact Us and Community Area pages."
+            },
+            {
+              "title": "Cookies",
+              "description": "BiDi uses a few types of different cookies to improve the user experience on the website, including Google Analytics for statistical assessment, affiliate cookies, and cookies for personalizing content."
+            }
+          ],
+          "cookieNote": "You can set up warnings for every time the Site places a cookie in your browser, or you can choose to disable all cookies. Please note that choosing to disable cookies may negatively affect some of the features that make your Site experience more efficient."
+        },
+        "minors": {
+          "title": "Personal Data of Underage Persons",
+          "content": [
+            "Persons younger than 18 shall not use the BiDi Services and provide any personal data to us without the supervision of the parents or guardians. Based on the above, it is presumed that any person using the BiDi Services and supplying personal data to us is at least 18 years of age. If a person younger than 18 years old or a person, supplying wrongful data, become known to BiDi, such person and all their data may be immediately and without any notice withdrawn by suspending their access to BiDi Services."
+          ]
+        },
+        "grounds": {
+          "title": "Grounds for Data Processing",
+          "content": [
+            "Your personal data is processed for the purpose of providing you the best BiDi services under the legal basis of performance of the contract between you and BiDi, as provided in our Terms of Service.",
+            "BiDi may process your personal data (email address) for direct marketing purposes in the following cases: when we obtain your consent to such processing (the legal basis for processing, in this case, is your consent) or when applicable law permits us to contact you without a separate consent (under the legal basis of a legitimate interest)."
+          ]
+        },
+        "rights": {
+          "title": "Your Personal Data Protection Rights",
+          "content": [
+            "You may request us to inform you about the personal data that we have collected about you, to request any changes or correction of inaccurate information, to object to certain processing of personal data (e.g. for marketing purposes), to provide you with a copy of your personal data in a structured, commonly used and machine-readable format, to transmit (if technically feasible) your personal data to another controller, or to erase your personal data. You also may request to restrict the processing of your personal data (when there is a legal basis for that). In cases where your personal data is processed on a separate consent basis, you have the right at any time to withdraw your consent to the processing of your personal data.",
+            "If you disagree with your data processing by BiDi, you are free not to use the BiDi Service, and to discontinue using it at any time. You may request us to discontinue processing of your personal data, in which case your data will be processed only as much as it is necessary to effect the discontinuation of your use of the BiDi Services (e.g., final settlement, or deleting all personal data based on your email address), or finalizing other BiDi's legal relationship with you (e.g. accounting, invoicing, processing refunds).",
+            "Due to technical reasons (such as backup copies of the databases) your personal data may be finally deleted only within 60 days or longer, if it is mandated by the statutory requirements.",
+            "If you wish to use the BiDi Services again, you will have to accept and agree to this Privacy Policy anew."
+          ]
+        },
+        "retention": {
+          "title": "Term for Storing Personal Data",
+          "content": [
+            "BiDi stores limited personal data for the whole period when the BiDi Services are used and for no longer than 2 years after last use of the App and/or the Services."
+          ]
+        },
+        "other": {
+          "title": "Other Terms",
+          "content": [
+            "If the data is processed by a designated subsidiary in your country, then the domestic law of your country may be applicable at our discretion.",
+            "BiDi would like to remind you that you are yourself responsible for the security of your data. We ask you to be careful when using and storing personal data containing files on your devices, as well as the devices itself. Please ensure that nobody accesses and uses your devices without your consent.",
+            "You shall be extra careful and not disclose your personal information to unrelated third parties, since such information may be used in different ways and against your interests, including activities such as fraud, invasion of privacy, identity theft, etc.",
+            "In order to ensure security of the personal data, BiDi employs various administrative, technical and physical security measures, however it is your responsibility to exercise caution and reason when using the BiDi Services. You will be personally responsible if such action violates any third party's privacy or any other rights, or any applicable law.",
+            "This Privacy Policy may be modified and updated at any time, at our sole discretion, for any or no reason, and without liability. The date of the most current wording of the Privacy Policy is indicated at the top of the text. We ask all users to ensure that they are familiar with the most current wording of the Privacy Policy.",
+            "You may not assign or transfer your rights or obligations under this Privacy Policy to any third party."
+          ]
+        }
+      },
+      "navLinks": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "membershipAgreement": "Membership Agreement"
+      }
+    },
+    "terms": {
+      "seoTitle": "Terms of Service - BiDi",
+      "seoDesc": "BiDi Terms of Service - Rules and conditions governing the use of BiDi services.",
+      "title": "Terms of Service",
+      "description": "These Terms govern your access to and use of BiDi services. By using our services, you agree to be bound by these Terms.",
+      "intro": [
+        "These terms of service (the \"Terms\") govern your access to and use of BiDi services, therefore we kindly ask you to carefully read them when visiting BiDi website, before you register, download, install and use the BiDi services, which include the BiDi software, BiDi mobile applications and any services that BiDi (\"we,\" \"us,\" \"our,\" or \"BiDi\") provides through our software, application or otherwise (all of which collectively are referred as the \"BiDi Services\").",
+        "Please note that the Terms constitute a binding legal agreement between you and BiDi. By visiting the website, registering for, installing and/or using the BiDi Services on any platform or device you agree to be bound by these Terms. If you do not agree to these Terms or any provisions hereof, please do not install and do not use our software, our mobile application and/or any of our products or services.",
+        "BiDi Services are transitory digital network communications services, which enhance internet security and privacy. We do not condone any unlawful use of the BiDi Services.",
+        "BiDi guarantees a strict no-logs policy for BiDi Services, meaning that the BiDi Service is provided by an automated process, and your activities while using it are not monitored, recorded, logged, stored or passed to any third party."
+      ],
+      "sections": {
+        "ourServices": {
+          "title": "Our Services",
+          "content": [
+            "BiDi Services are transitory digital network communications services, which enhance internet security and privacy. At your individual request and at your sole discretion we automatically provide unsupervised and non-monitored data conduit for your exclusive use, at your own risk and responsibility. You are solely and exclusively responsible for the use of the BiDi Services. BiDi will not be liable in any way or form for actions done by its users including criminal liability and civil liability for harm executed or not executed. BiDi liability is further limited by other provisions of these Terms.",
+            "We grant you a permission to use the BiDi Services subject to the restrictions set forth in these Terms. Your use of the BiDi Services is at your own risk. The BiDi Services may be modified, updated, interrupted or suspended at any time without notice or liability. BiDi, its owners, employees, agents and others that are involved with the BiDi services are not in any way or form liable for any harm of any kind executed or not executed, resulting from or arising through or from the use of any account registered with BiDi services.",
+            "BiDi allows a maximum of three simultaneous connections per account. That includes proxy connections, and each of them counts as a separate slot.",
+            "BiDi guarantees a 99.9% service uptime. In any event, BiDi shall not be liable for any loss, monetary or non-monetary harm beyond what the client paid to BiDi, and this shall not include attorney fees or court costs irrespective of any laws or statutes that prescribe otherwise.",
+            "BiDi collects and processes very limited user data. Further information about user data processing is provided in the Privacy Policy and User Data section of the Terms."
+          ]
+        },
+        "noLogs": {
+          "title": "No-logs Policy",
+          "content": [
+            "BiDi guarantees a strict no-logs policy for BiDi Services, meaning that the BiDi Service is provided by an automated process, and your activities while using it are not monitored, recorded, logged, stored or passed to any third party. We do not store connection timestamps, session information, used bandwidth, traffic logs, IP addresses or other data. However, to limit the number of simultaneous sessions of an active user, an algorithm keeps their username and the timestamp of the last session status while the session is active. This data is wiped within 15 minutes after the session is terminated.",
+            "BiDi does not condone or endorse any unlawful, illicit, criminal or fraudulent activities perpetrated by using the BiDi Services. Therefore, BiDi reserves the right to suspend or terminate an account in case any violation of the Terms of Service becomes apparent. As BiDi protects and respects customer privacy, it does not log or track their activity in any way. However, in the eventuality that BiDi would find out about an offense outside of those means, it would have the right to suspend or terminate the account."
+          ]
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property Rights",
+          "content": [
+            "Subject to the terms and conditions of these Terms, we grant you a limited, non-exclusive, personal, non-transferable, non-sublicensable, license to: (1) download and use a copy of the BiDi software; and (2) use the BiDi Services, including, without limitation, the products and services made available on or through the BiDi software or our website. The license provided herein is effective until terminated. This license automatically terminates if you fail to comply with these Terms.",
+            "The BiDi Services, including, but not limited to, the BiDi software, mobile application and all other items, are owned and copyrighted by BiDi, and are protected worldwide. We retain all right, title and interest in and to the BiDi Services and any portion thereof, including, without limitation, all copyrights, trademarks, service marks, trade secrets and other intellectual property rights. All rights are reserved unless otherwise noted."
+          ]
+        },
+        "minors": {
+          "title": "Minors",
+          "content": [
+            "BiDi Services may be used by persons aged at least 18 years old. You are disallowed to connect and use the BiDi Services if you are a minor, a competitor of our business, if you have been or are prohibited to access the BiDi Services, or if your account has been suspended or closed due to any reason."
+          ]
+        },
+        "payments": {
+          "title": "Payments",
+          "content": [
+            "BiDi Services are subscribed on a service period basis. You choose the service period and the payment method yourself when you sign up for the BiDi Services. The BiDi app for any platform or operating system supported by BiDi can be downloaded free of charge. Users will have to purchase a paid subscription from BiDi to connect to the BiDi Service, except in the case of a limited free trial or certain coupon offers.",
+            "Your service will automatically be renewed and your chosen payment method will be charged at the end of each service period, repeating the length of the previous service period, unless you decide to cancel your subscription for the BiDi Services."
+          ]
+        },
+        "refund": {
+          "title": "Refund Policy",
+          "content": [
+            "If you wish to claim a refund, you can do so within 30 days following your purchase of BiDi Service. We seek your full satisfaction with our services. However, we would like to troubleshoot an issue you experience first.",
+            "Subscriptions purchased via the iTunes/App Store are subject to iTunes/App Store refund policies. This means we cannot grant refunds if you purchased an app through iTunes/App Store – you will have to contact store support for that. Payments made using prepaid cards or gift cards will not be refunded. BiDi cannot refund any purchases made from our resellers. In this case, refunds are handled according to the terms of service of the reseller from which the product was purchased. For payments made in cryptocurrency, the equivalent amount in US Dollars will be refunded in the same cryptocurrency (based on the rate of exchange at the moment of refund).",
+            "You have a right to cancel your account at any time. You can cancel a recurring subscription from your website profile, iTunes/App Store or Google Play Store. Cancelled accounts will not be refunded for the unused part of the ongoing service period.",
+            "BiDi reserves the right to suspend or refuse service to anyone at any time for any reason. No refunds will be considered for accounts terminated for violation of these Terms."
+          ]
+        },
+        "prohibited": {
+          "title": "Prohibited and Restricted Uses",
+          "content": [
+            "Your access to and use of the BiDi Services is subject to these Terms and all applicable laws and regulations. We reserve the right, at any time, in our sole discretion, with or without notice, to terminate the accounts of, and block access to the BiDi Services to any users who infringe any applicable laws or these Terms.",
+            "While using the BiDi Services you yourself agree not to, and agree not assist, encourage, or enable others to use the BiDi Services:"
+          ],
+          "list": [
+            "for unlawful, illicit, illegal, criminal or fraudulent activities, including but not limited to port scanning, sending spam, sending opt-in email, scanning for open relays or open proxies, sending unsolicited e-mail or any version or type of email sent in vast quantities even if the email is routed through third-party servers, any pop-up launching, use of stolen credit cards, credit card fraud, financial fraud, cryptocurrency fraud, cloaking, extortion, blackmail, kidnapping, rape, murder, sale of stolen credit cards, sale of stolen goods, offer or sale of prohibited, military and dual use goods, offer or sale of controlled substances, identity theft, hacking, pharming, phishing, scraping in any form or scale, digital piracy, intellectual property infringements and other similar activities;",
+            "to assault, interfere, gain unauthorized access, deny service in any way or form to any other network, computer or node through BiDi Services;",
+            "to exploit children in any way, including audio, video, photography, digital content, etc.;",
+            "to upload or distribute in any way files that contain viruses, worms, trojans, corrupted files, or any other similar software or programs that may damage the operation of another's computer;",
+            "to interfere with or attempt to interfere with the proper working of the BiDi Services, any transactions being offered in connection with the BiDi Services or any other activities conducted by us, disrupt our website or any networks connected to the BiDi Services, or bypass any measures we may use to prevent or restrict access to the BiDi Services;",
+            "to exploit the BiDi Services in any unauthorized way whatsoever, including, but not limited to, by trespass or burdening network capacity;",
+            "to use any robot, spider, scraper, or other automated means to access our website or BiDi Services for any purpose without our prior written permission;",
+            "to collect or harvest personal information about other users of the BiDi Services;",
+            "to collect or harvest personal data of individuals, without legitimate interest or consent, or in violation of any applicable law;",
+            "to take any action that imposes or may impose an unreasonable or disproportionately large load on our infrastructure;",
+            "to share any data or other content with any unreasonably large number of persons, including without limitation sending blast communications to a large number of recipients or sharing content with persons you do not know or who do not know you;",
+            "to represent that you are the representative or agent of any of the BiDi Services, including any of its functionality;",
+            "to incorporate the BiDi Services or any portion thereof into any other program or product;",
+            "to copy or reproduce, in any form or by any means, any part of the BiDi Services;",
+            "to modify, translate, reverse engineer, decompile, disassemble, or create any derivative works based on the BiDi Services, including any of its files or documentation, or any portion thereof, or determine or attempt to determine any source code, algorithms, methods or techniques embodied in the BiDi application or any portion thereof;",
+            "to violate general ethic or moral norms, good customs and fair conduct norms;",
+            "to violate any third party's rights, including any breach of confidence, personal data, copyright or any other intellectual property or proprietary right;",
+            "to threaten, stalk, harm, or harass others, or promote bigotry or discrimination;",
+            "to attempt to manipulate the BiDi name, services or products;",
+            "to solicit or harvest personal information from or communicate with minors;",
+            "attempt to gain unauthorized access to the BiDi Services, user accounts, computer systems or networks connected to the BiDi Services through hacking, password mining, brute force or any other means;",
+            "to use the BiDi Services for any military purpose, including cyberwarfare, weapons development, design, manufacture or production of missiles, nuclear, chemical or biological weapons;",
+            "to otherwise infringe or circumvent these Terms."
+          ],
+          "afterList": [
+            "We reserve the right to refuse service, suspend accounts or limit access to the BiDi Services in our sole discretion. Such suspension or access limitation may be implemented by BiDi instantly and without any indication, notice or refund. If your account has been suspended, you must contact us for further information. We may suspend your user account for a reasonable period of time before we terminate a user account permanently.",
+            "We are under no obligation to enforce the Terms against you. We encourage you to let us know about the violation of these Terms by any BiDi users; however, in case of such violations we may take appropriate action at our sole discretion."
+          ]
+        },
+        "userData": {
+          "title": "User Data",
+          "content": [
+            "You agree to read our Privacy Policy, which explains what type of information we collect and what might happen to that information, including, without limitation, how such information is shared and used. Our Privacy Policy contains information that you should review prior to using the BiDi Services. Our Privacy Policy will apply to the information we collect, whether or not you choose to read it.",
+            "We do not log or store any records on user activity using BiDi Services: however, you are required to create a user account in order to use BiDi Services. If you choose to create a user account, you must provide some basic information, specifically: valid email address and payment information. You must maintain and update this information current, truthful, complete and accurate. You authorize us to verify your information at any time.",
+            "You are responsible for maintaining the confidentiality of your BiDi account username and password and for restricting access to your account. You may not share your password or other account access information with any other party, temporarily or permanently, and you agree to accept responsibility for all activities that occur under your account or password, whether or not authorized by you. You agree to immediately notify us of any unauthorized use of your account."
+          ]
+        },
+        "disclaimer": {
+          "title": "Disclaimer of Warranties",
+          "content": [
+            "Reasonable efforts are taken to improve the accuracy and integrity of the BiDi Services, but we are not responsible for downtime, loss of data, corrupt data, service delay, mistakes, out-of-date information, or other errors. Notwithstanding any other provision of these Terms, we reserve the right to change, suspend, remove, or disable access to the BiDi Services, or any functionality comprising a part of the BiDi Services at any time without notice.",
+            "THE BiDi SERVICES (INCLUDING, WITHOUT LIMITATION, OUR SOFTWARE, MOBILE APPLICATIONS, SERVICES AND WEBSITE) ARE PROVIDED \"AS IS\" AND WITH ALL FAULTS. WE MAKE NO REPRESENTATION OR WARRANTY WHATSOEVER REGARDING THE COMPLETENESS, ACCURACY, ADEQUACY, SUITABILITY, FUNCTIONALITY, AVAILABILITY, OR OPERATION OF THE BiDi SERVICES. YOU ACKNOWLEDGE THAT WE DO NOT HAVE CONTROL OVER YOUR USE OF THE BiDi SERVICES. TO THE FULL EXTENT PERMISSIBLE BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+            "We shall not be responsible or have any liability for any delay or failure to perform to the extent due to unforeseen circumstances or causes beyond its reasonable control, including, without limitation, failures of your telecommunication or internet service providers, Force Majeure, earthquakes, fires, floods, embargoes, labor disputes and strikes, riots, war, and acts of civil and military authorities."
+          ]
+        },
+        "liability": {
+          "title": "Limitation of Liability",
+          "content": [
+            "There are inherent risks in relying upon, using, transmitting or retrieving any data and/or content on the Internet, and we urge you to make sure you understand these risks before using the BiDi Services.",
+            "YOUR USE OF THE BiDi SERVICES IS AT YOUR OWN RISK. NEITHER BiDi NOR ANY OF ITS PARENTS, SUBSIDIARIES OR AFFILIATES, NOR ANY OF THEIR EMPLOYEES, OFFICERS OR DIRECTORS, SHALL BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR OTHER DAMAGES (INCLUDING, WITHOUT LIMITATION, LOSS OF DATA OR INFORMATION OF ANY KIND, LOSS OF BUSINESS, LOST PROFITS, INTERRUPTION OF BUSINESS, COST OF COVER OR ANY OTHER DAMAGES) ARISING OUT OF OR IN ANY WAY RELATED TO THIS AGREEMENT OR THE USE OR INABILITY TO USE THE BiDi SERVICES. IN ANY CASE THE LIABILITY OF BiDi SHALL NOT EXCEED WHAT THE CLIENT PAID TO BiDi, AND SHALL NOT INCLUDE ATTORNEY FEES OR COURT COSTS IRRESPECTIVE OF ANY LAWS OR STATUTES THAT MAY PRESCRIBE OTHERWISE."
+          ]
+        },
+        "indemnification": {
+          "title": "Indemnification",
+          "content": [
+            "You agree, at your own expense, to indemnify, defend and hold harmless BiDi, its parents, subsidiaries and affiliates, and their officers, directors, employees, agents, distributors and licensees, from and against any judgments, losses, deficiencies, damages, liabilities, costs, claims, demands, suits, and expenses (including, without limitation, reasonable attorneys' fees, expert witness fees and expenses) incurred in, arising out of or in any way related to your breach of these Terms, your use of the BiDi Services, or any of your other acts or omissions."
+          ]
+        },
+        "geographical": {
+          "title": "Geographical Access",
+          "content": [
+            "The BiDi Services are not geographically limited; however, we make no representations or warranties that the BiDi Services are appropriate for use or access in your location and jurisdiction.",
+            "You access and use the BiDi Services in your country on your own initiative and you solely are responsible for complying with your local laws and regulations, if and to the extent such laws are applicable. We reserve the right to limit, in our sole discretion, the availability of the BiDi Services or any portion thereof, to any person, entity, geographic area, or jurisdiction, at any time."
+          ]
+        },
+        "electronic": {
+          "title": "Electronic Communications",
+          "content": [
+            "You consent to receive communications from us electronically, e.g. by email, application messages, etc. We will communicate with you through the email that you provide. You agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement that such communications be in writing."
+          ]
+        },
+        "miscellaneous": {
+          "title": "Miscellaneous",
+          "content": [
+            "We reserve the right to modify and update these Terms at Our sole discretion, at any time, for any or no reason, and without liability, as indicated below. The amendment of Terms may be communicated to you by sending an email and/or by publishing the updated Terms on the BiDi website.",
+            "We also reserve the right to modify, update, or suspend the operation of the BiDi Services at our sole discretion, at any time, for any or no reason, and without notice or liability.",
+            "All users of BiDi Services are obliged to ensure that they are familiar with the most current wording of the Terms. The change of the Terms may be communicated to you by publishing the updated Terms on BiDi website, where the date of the most current wording of the Terms is indicated at the top of the web page. Since you agree to be bound by these Terms each time you use the BiDi services, please consider reviewing the Terms each time you use the BiDi services.",
+            "The Terms constitute an agreement between you and us regarding the use of the BiDi Services. The parties acknowledge that no reliance is placed on any representation made but not expressly contained in these Terms.",
+            "If any provision of the Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that the Terms shall otherwise remain in full force and effect and enforceable.",
+            "You may not assign or transfer your rights or obligations under these Terms to any third party.",
+            "These Terms and your use of the BiDi Services are governed by the laws of Panama, without regard to its choice of law provisions. You agree that the courts of general jurisdiction located in Panama City, Republic of Panama, will have exclusive jurisdiction over any and all disputes arising out of or relating in any way to these Terms or the BiDi Services."
+          ]
+        }
+      },
+      "navLinks": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "membershipAgreement": "Membership Agreement"
+      }
+    }
+  }
+}
