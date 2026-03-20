@@ -8,6 +8,9 @@
   },
   "hero": {
     "title": "快速、安全，一键连接更优质的互联网。",
+    "titleLine1": "快速、安全，",
+    "titleHighlight": "一键连接",
+    "titleLine3": "更优质的互联网。",
     "badge": "v1.0 全新发布",
     "description": "企业级加密、全球高速服务器以及极致的在线自由——只需轻轻一按即可享受。"
   },
@@ -24,6 +27,7 @@
   },
   "features": {
     "title": "功能",
+    "headlinePrefix": "为什么选择 ",
     "items": [
       {
         "title": "智能快速连接",
@@ -45,6 +49,11 @@
   "advantages": {
     "title": "优势",
     "description": "为何游戏玩家和主播选择我们",
+    "visual": {
+      "ddos": "DDoS 防护",
+      "monitoring": "实时监测",
+      "enterprise": "企业级安全"
+    },
     "items": [
       {
         "label": "游戏DDoS防护",
@@ -72,8 +81,15 @@
   },
   "pricing": {
     "title": "选择您的计划",
+    "headlinePrefix": "选择您的",
+    "headlineHighlight": "计划",
     "description": "所有方案均可无限制使用所有功能。",
     "popular": "最受欢迎",
+    "features": {
+      "unlimited": "全功能无限制",
+      "servers": "10,000+ 服务器",
+      "devices": "多设备同时连接"
+    },
     "planMonth": "月计划",
     "planQuarter": "季度计划",
     "planYear": "一年计划",

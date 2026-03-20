@@ -8,6 +8,9 @@
   },
   "hero": {
     "title": "Fast, secure, one-tap access to a better internet.",
+    "titleLine1": "Fast, secure,",
+    "titleHighlight": "one-tap access",
+    "titleLine3": "to a better internet.",
     "badge": "v1.0 Now Available",
     "description": "Enterprise-grade encryption, global high-speed servers, and ultimate online freedom—all at the tap of a button."
   },
@@ -24,6 +27,7 @@
   },
   "features": {
     "title": "Features",
+    "headlinePrefix": "Why choose ",
     "items": [
       {
         "title": "Smart Quick Connect",
@@ -45,6 +49,11 @@
   "advantages": {
     "title": "Advantages",
     "description": "Why gamers and streamers choose us",
+    "visual": {
+      "ddos": "DDoS Protection",
+      "monitoring": "Real-time Monitoring",
+      "enterprise": "Enterprise Security"
+    },
     "items": [
       {
         "label": "Game DDoS Protection",
@@ -72,8 +81,15 @@
   },
   "pricing": {
     "title": "Choose Your Plan",
+    "headlinePrefix": "Choose your ",
+    "headlineHighlight": "plan",
     "description": "All plans include unlimited access to every feature.",
     "popular": "Most Popular",
+    "features": {
+      "unlimited": "Unlimited access to all features",
+      "servers": "10,000+ servers",
+      "devices": "Connect multiple devices at once"
+    },
     "planMonth": "Monthly",
     "planQuarter": "Quarterly",
     "planYear": "Yearly",

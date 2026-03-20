@@ -73,9 +73,9 @@ const stats = computed(() => [
 
 /* ── Pricing features ── */
 const pricingFeatures = computed(() => [
-  t('pricing.planMonth') ? '全功能无限制' : 'All Features',
-  t('pricing.planMonth') ? '10,000+ 服务器' : '10,000+ Servers',
-  t('pricing.planMonth') ? '多设备同时连接' : 'Multi-device'
+  t('pricing.features.unlimited'),
+  t('pricing.features.servers'),
+  t('pricing.features.devices')
 ])
 
 /* ── Pricing Snap Scroll ── */
@@ -209,9 +209,9 @@ function animateParticles() {
             <h1
               class="hero-title hero-anim-y-30 anim-fade-up anim-delay-100"
             >
-              快速、安全，<br />
-              <span class="gradient-text">一键连接</span><br />
-              更优质的互联网。
+              {{ t('hero.titleLine1') }}<br />
+              <span class="gradient-text">{{ t('hero.titleHighlight') }}</span><br />
+              {{ t('hero.titleLine3') }}
             </h1>
 
             <!-- Description -->
@@ -300,7 +300,7 @@ function animateParticles() {
         <div class="text-center mb-16 reveal">
           <span class="section-tag">{{ page.features.title }}</span>
           <h2 class="section-title">
-            为什么选择 <span class="gradient-text">BiDi</span>
+            {{ t('features.headlinePrefix') }}<span class="gradient-text">BiDi</span>
           </h2>
         </div>
 
@@ -413,7 +413,7 @@ function animateParticles() {
 
           <!-- Right: Shield visualization -->
           <div class="reveal flex justify-center">
-            <SvgAdvantagesShieldVisual class="w-full max-w-[400px]" />
+            <AdvantagesShieldVisual class="w-full max-w-[400px]" />
           </div>
         </div>
       </UContainer>
@@ -438,7 +438,7 @@ function animateParticles() {
             {{ page.pricing.title }}
           </UBadge>
           <h2 class="section-title mb-3">
-            选择您的<span class="gradient-text">计划</span>
+            {{ t('pricing.headlinePrefix') }}<span class="gradient-text">{{ t('pricing.headlineHighlight') }}</span>
           </h2>
           <p class="section-subtitle">
             {{ page.pricing.description }}
@@ -528,7 +528,6 @@ function animateParticles() {
               </UButton>
             </UCard>
           </div>
-
         </div>
 
         <!-- ★ Snap indicators — pricing-scroll 外面 -->
@@ -539,7 +538,7 @@ function animateParticles() {
             class="pricing-dot"
             :class="{ active: pricingActive === i }"
             @click="pricingScrollTo(i)"
-          />
+          ></button>
         </div>
       </UContainer>
     </section>

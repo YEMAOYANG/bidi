@@ -1,0 +1,274 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 440 460"
+    fill="none"
+    class="advantages-shield-visual"
+  >
+    <defs>
+      <linearGradient
+        id="asv-shieldGrad"
+        x1="110"
+        y1="60"
+        x2="330"
+        y2="372"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop
+          offset="0%"
+          stop-color="#00f5ff"
+        />
+        <stop
+          offset="100%"
+          stop-color="#7c3aed"
+        />
+      </linearGradient>
+      <linearGradient
+        id="asv-shieldStroke"
+        x1="110"
+        y1="60"
+        x2="330"
+        y2="372"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop
+          offset="0%"
+          stop-color="#00f5ff"
+          stop-opacity="0.6"
+        />
+        <stop
+          offset="100%"
+          stop-color="#7c3aed"
+          stop-opacity="0.4"
+        />
+      </linearGradient>
+      <linearGradient
+        id="asv-lockGrad"
+        x1="195"
+        y1="198"
+        x2="245"
+        y2="242"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop
+          offset="0%"
+          stop-color="#00c8ff"
+        />
+        <stop
+          offset="100%"
+          stop-color="#7c3aed"
+        />
+      </linearGradient>
+    </defs>
+    <circle
+      cx="220"
+      cy="220"
+      r="185"
+      stroke="rgba(0,245,255,0.05)"
+      stroke-width="1"
+      stroke-dasharray="6 10"
+    />
+    <circle
+      cx="220"
+      cy="220"
+      r="160"
+      stroke="rgba(124,58,237,0.08)"
+      stroke-width="1"
+    />
+    <path
+      d="M220 60L110 108V196C110 275.6 155.6 348.4 220 372C284.4 348.4 330 275.6 330 196V108L220 60Z"
+      fill="url(#asv-shieldGrad)"
+      fill-opacity="0.15"
+      stroke="url(#asv-shieldStroke)"
+      stroke-width="1.5"
+    />
+    <path
+      d="M220 88L135 126V196C135 262.8 170.8 323.6 220 344C269.2 323.6 305 262.8 305 196V126L220 88Z"
+      fill="url(#asv-shieldGrad)"
+      fill-opacity="0.08"
+    />
+    <rect
+      x="195"
+      y="198"
+      width="50"
+      height="44"
+      rx="8"
+      fill="url(#asv-lockGrad)"
+      fill-opacity="0.9"
+    />
+    <path
+      d="M205 198V186C205 175.5 214 167 224.5 167C235 167 244 175.5 244 186V198"
+      stroke="#00f5ff"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+    <circle
+      cx="220"
+      cy="218"
+      r="6"
+      fill="white"
+      fill-opacity="0.9"
+    />
+    <rect
+      x="218.5"
+      y="218"
+      width="3"
+      height="12"
+      rx="1.5"
+      fill="rgba(0,245,255,0.8)"
+    />
+    <rect
+      x="60"
+      y="140"
+      width="100"
+      height="28"
+      rx="14"
+      fill="rgba(0,245,255,0.08)"
+      stroke="rgba(0,245,255,0.2)"
+      stroke-width="1"
+    />
+    <text
+      x="110"
+      y="158"
+      text-anchor="middle"
+      fill="#00f5ff"
+      font-size="11"
+      font-weight="600"
+      font-family="ui-sans-serif, system-ui, sans-serif"
+    >
+      AES-256
+    </text>
+    <rect
+      x="278"
+      y="140"
+      width="100"
+      height="28"
+      rx="14"
+      fill="rgba(168,85,247,0.08)"
+      stroke="rgba(168,85,247,0.2)"
+      stroke-width="1"
+    />
+    <text
+      x="328"
+      y="158"
+      text-anchor="middle"
+      fill="#a855f7"
+      font-size="11"
+      font-weight="600"
+      font-family="ui-sans-serif, system-ui, sans-serif"
+    >
+      {{ t('advantages.visual.ddos') }}
+    </text>
+    <rect
+      x="60"
+      y="300"
+      width="100"
+      height="28"
+      rx="14"
+      fill="rgba(0,255,136,0.08)"
+      stroke="rgba(0,255,136,0.2)"
+      stroke-width="1"
+    />
+    <text
+      x="110"
+      y="318"
+      text-anchor="middle"
+      fill="#10b981"
+      font-size="11"
+      font-weight="600"
+      font-family="ui-sans-serif, system-ui, sans-serif"
+    >
+      TLS 1.3
+    </text>
+    <rect
+      x="278"
+      y="300"
+      width="110"
+      height="28"
+      rx="14"
+      fill="rgba(244,114,182,0.08)"
+      stroke="rgba(244,114,182,0.2)"
+      stroke-width="1"
+    />
+    <text
+      x="333"
+      y="318"
+      text-anchor="middle"
+      fill="#f472b6"
+      font-size="11"
+      font-weight="600"
+      font-family="ui-sans-serif, system-ui, sans-serif"
+    >
+      {{ t('advantages.visual.monitoring') }}
+    </text>
+    <line
+      x1="160"
+      y1="154"
+      x2="190"
+      y2="190"
+      stroke="rgba(0,245,255,0.15)"
+      stroke-width="0.8"
+      stroke-dasharray="3 4"
+    />
+    <line
+      x1="278"
+      y1="154"
+      x2="248"
+      y2="190"
+      stroke="rgba(168,85,247,0.15)"
+      stroke-width="0.8"
+      stroke-dasharray="3 4"
+    />
+    <line
+      x1="160"
+      y1="314"
+      x2="190"
+      y2="260"
+      stroke="rgba(0,255,136,0.15)"
+      stroke-width="0.8"
+      stroke-dasharray="3 4"
+    />
+    <line
+      x1="278"
+      y1="314"
+      x2="248"
+      y2="260"
+      stroke="rgba(244,114,182,0.15)"
+      stroke-width="0.8"
+      stroke-dasharray="3 4"
+    />
+    <rect
+      x="140"
+      y="400"
+      width="160"
+      height="36"
+      rx="18"
+      fill="rgba(0,255,136,0.08)"
+      stroke="rgba(0,255,136,0.25)"
+      stroke-width="1"
+    />
+    <circle
+      cx="163"
+      cy="418"
+      r="5"
+      fill="#10b981"
+    />
+    <text
+      x="225"
+      y="422"
+      text-anchor="middle"
+      fill="#10b981"
+      font-size="12"
+      font-weight="700"
+      font-family="ui-sans-serif, system-ui, sans-serif"
+    >
+      {{ t('advantages.visual.enterprise') }}
+    </text>
+  </svg>
+</template>
