@@ -63,12 +63,12 @@ const page = computed(() => ({
   }
 }))
 
-/* ── Stats — i18n aware ── */
+/* ── Stats — 使用 i18n 翻译 key ── */
 const stats = computed(() => [
-  { value: '10,000+', label: t('advantages.items.0.label') ? '全球服务器' : 'Global Servers' },
-  { value: '59+', label: t('advantages.items.1.label') ? '覆盖国家' : 'Countries' },
-  { value: '99.9%', label: t('advantages.items.2.label') ? '在线率' : 'Uptime' },
-  { value: '7' + t('pricing.perDay').charAt(0), label: t('advantages.items.3.label') ? '退款保障' : 'Refund' }
+  { value: '10,000+', label: t('stats.servers') },
+  { value: '59+',     label: t('stats.countries') },
+  { value: '99.9%',   label: t('stats.uptime') },
+  { value: '7',       label: t('stats.guarantee') }
 ])
 
 /* ── Pricing features ── */
