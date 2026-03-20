@@ -64,6 +64,12 @@
       }
     ]
   },
+  "stats": {
+    "servers": "全球服务器",
+    "countries": "覆盖国家",
+    "uptime": "在线率",
+    "guarantee": "退款保障"
+  },
   "pricing": {
     "title": "选择您的计划",
     "description": "所有方案均可无限制使用所有功能。",

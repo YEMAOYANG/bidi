@@ -64,6 +64,12 @@
       }
     ]
   },
+  "stats": {
+    "servers": "Global Servers",
+    "countries": "Countries",
+    "uptime": "Uptime",
+    "guarantee": "Money-Back"
+  },
   "pricing": {
     "title": "Choose Your Plan",
     "description": "All plans include unlimited access to every feature.",
