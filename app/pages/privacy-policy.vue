@@ -8,16 +8,10 @@ useSeoMeta({
 
 interface HighlightItem { title: string, description: string }
 interface TechItem { title: string, description: string }
-
 interface Section {
-  id: string
-  icon: string
-  title: string
-  content: string[]
-  highlights?: HighlightItem[]
-  afterHighlights?: string[]
-  technicalInfo?: TechItem[]
-  cookieNote?: string
+  id: string; icon: string; title: string; content: string[]
+  highlights?: HighlightItem[]; afterHighlights?: string[]
+  technicalInfo?: TechItem[]; cookieNote?: string
 }
 
 const sectionMeta = [
@@ -33,7 +27,6 @@ function resolveArr(val: unknown): string[] {
   if (!Array.isArray(val)) return []
   return val.map(item => rt(item))
 }
-
 function resolveObjArr(val: unknown): Record<string, string>[] {
   if (!Array.isArray(val)) return []
   return val.map((item) => {
@@ -48,9 +41,7 @@ const sections = computed<Section[]>(() =>
   sectionMeta.map(({ id, icon, key }) => {
     const base = tm(`legal.privacy.sections.${key}`) as Record<string, unknown>
     return {
-      id,
-      icon,
-      title: rt(base.title),
+      id, icon, title: rt(base.title),
       content: resolveArr(base.content),
       highlights: base.highlights ? resolveObjArr(base.highlights) as HighlightItem[] : undefined,
       afterHighlights: base.afterHighlights ? resolveArr(base.afterHighlights) : undefined,
@@ -61,50 +52,52 @@ const sections = computed<Section[]>(() =>
 )
 
 const intro = computed(() => resolveArr(tm('legal.privacy.intro')))
-
 const cards = computed(() => {
   const raw = tm('legal.privacy.cards') as Record<string, unknown>
   const resolve = (key: string) => {
     const card = raw[key] as Record<string, unknown>
     return { title: rt(card.title), desc: rt(card.desc) }
   }
-  return {
-    noLogs: resolve('noLogs'),
-    minimalData: resolve('minimalData'),
-    noSharing: resolve('noSharing')
-  }
+  return { noLogs: resolve('noLogs'), minimalData: resolve('minimalData'), noSharing: resolve('noSharing') }
 })
 </script>
 
 <template>
-  <div class="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
-    <!-- 顶部 Hero 区域 -->
-    <div class="relative overflow-hidden border-b border-[#6366f1]/20">
-      <div class="absolute inset-0 bg-linear-to-br from-[#6366f1]/8 via-transparent to-[#8b5cf6]/5 dark:from-[#6366f1]/10 pointer-events-none" />
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18 relative">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="flex size-10 items-center justify-center rounded-xl bg-[#6366f1]/15 dark:bg-[#6366f1]/20 ring-1 ring-[#6366f1]/40">
-            <UIcon name="i-lucide-shield" class="size-5 text-[#6366f1]" />
+  <div class="min-h-screen" style="background: #030712; color: #fff;">
+
+    <!-- Hero -->
+    <div class="relative overflow-hidden pt-24 pb-16" style="background: linear-gradient(180deg, #050b1a 0%, #030712 100%);">
+      <div class="absolute inset-0 pointer-events-none"
+           style="background-image: linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px); background-size: 60px 60px;" />
+      <div class="absolute top-0 right-0 w-96 h-96 pointer-events-none"
+           style="background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 60%); filter: blur(40px);" />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="flex w-11 h-11 items-center justify-center rounded-2xl"
+               style="background: rgba(0,245,255,0.1); border: 1px solid rgba(0,245,255,0.2);">
+            <UIcon name="i-lucide-shield" class="w-5 h-5" style="color: #00f5ff;" />
           </div>
-          <UBadge color="primary" variant="soft" size="sm">
+          <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full"
+                style="background: rgba(0,245,255,0.08); border: 1px solid rgba(0,245,255,0.2); color: #00f5ff;">
             {{ t('legal.common.legalDocument') }}
-          </UBadge>
+          </span>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+        <h1 class="text-4xl lg:text-5xl font-black mb-4 leading-tight">
           {{ t('legal.privacy.title') }}
         </h1>
-        <p class="text-lg text-gray-500 dark:text-gray-400 max-w-3xl leading-relaxed">
+        <p class="text-lg leading-relaxed max-w-3xl" style="color: rgba(255,255,255,0.5);">
           {{ t('legal.privacy.description') }}
         </p>
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-      <div class="lg:grid lg:grid-cols-[280px_1fr] lg:gap-14">
-        <!-- 侧边导航 -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="lg:grid lg:grid-cols-[260px_1fr] lg:gap-14">
+
+        <!-- Sidebar -->
         <aside class="hidden lg:block">
-          <div class="sticky top-8">
-            <p class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4">
+          <div class="sticky top-24">
+            <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.3);">
               {{ t('legal.common.onThisPage') }}
             </p>
             <nav class="space-y-0.5">
@@ -112,133 +105,116 @@ const cards = computed(() => {
                 v-for="section in sections"
                 :key="section.id"
                 :href="`#${section.id}`"
-                class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-[#6366f1] dark:hover:text-[#6366f1] transition-colors py-1.5 border-l-2 border-transparent hover:border-[#6366f1] pl-3"
+                class="flex items-center gap-2 text-sm py-2 px-3 rounded-lg border-l-2 border-transparent transition-all duration-200"
+                style="color: rgba(255,255,255,0.4);"
+                onmouseover="this.style.color='#00f5ff'; this.style.borderLeftColor='#00f5ff'; this.style.background='rgba(0,245,255,0.05)';"
+                onmouseout="this.style.color='rgba(255,255,255,0.4)'; this.style.borderLeftColor='transparent'; this.style.background='transparent';"
               >
-                <UIcon :name="section.icon" class="size-3.5 shrink-0" />
+                <UIcon :name="section.icon" class="w-3.5 h-3.5 shrink-0" />
                 {{ section.title }}
               </a>
             </nav>
           </div>
         </aside>
 
-        <!-- 主内容 -->
+        <!-- Main -->
         <main class="min-w-0">
-          <!-- 摘要卡片 -->
+          <!-- Summary cards -->
           <div class="mb-10 grid sm:grid-cols-3 gap-4">
-            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-              <UIcon name="i-lucide-lock" class="size-8 text-[#6366f1] mx-auto mb-3" />
-              <p class="text-sm font-semibold mb-1">
-                {{ cards.noLogs.title }}
-              </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">
-                {{ cards.noLogs.desc }}
-              </p>
-            </div>
-            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-              <UIcon name="i-lucide-minimize-2" class="size-8 text-[#6366f1] mx-auto mb-3" />
-              <p class="text-sm font-semibold mb-1">
-                {{ cards.minimalData.title }}
-              </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">
-                {{ cards.minimalData.desc }}
-              </p>
-            </div>
-            <div class="p-5 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-center">
-              <UIcon name="i-lucide-user-x" class="size-8 text-[#6366f1] mx-auto mb-3" />
-              <p class="text-sm font-semibold mb-1">
-                {{ cards.noSharing.title }}
-              </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">
-                {{ cards.noSharing.desc }}
-              </p>
+            <div
+              v-for="(card, key) in cards"
+              :key="key"
+              class="p-5 rounded-2xl text-center transition-all duration-300"
+              style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);"
+            >
+              <UIcon name="i-lucide-lock" class="w-8 h-8 mx-auto mb-3" style="color: #00f5ff;" />
+              <p class="text-sm font-semibold mb-1 text-white">{{ card.title }}</p>
+              <p class="text-xs" style="color: rgba(255,255,255,0.4);">{{ card.desc }}</p>
             </div>
           </div>
 
-          <!-- 前言 -->
-          <div class="mb-10 p-6 rounded-2xl bg-[#6366f1]/5 border border-[#6366f1]/20">
+          <!-- Intro -->
+          <div class="mb-10 p-6 rounded-2xl" style="background: rgba(0,245,255,0.04); border: 1px solid rgba(0,245,255,0.12);">
             <p
               v-for="(para, idx) in intro"
               :key="idx"
-              class="text-gray-600 dark:text-gray-300 leading-relaxed"
+              class="leading-relaxed"
               :class="idx < intro.length - 1 ? 'mb-4' : ''"
+              style="color: rgba(255,255,255,0.65);"
             >
               {{ para }}
             </p>
           </div>
 
-          <!-- 各章节 -->
+          <!-- Sections -->
           <div class="space-y-12">
             <section
               v-for="section in sections"
               :id="section.id"
               :key="section.id"
-              class="scroll-mt-8"
+              class="scroll-mt-24"
             >
               <div class="flex items-center gap-3 mb-6">
-                <div class="flex size-9 items-center justify-center rounded-xl bg-[#6366f1]/15 dark:bg-[#6366f1]/20 ring-1 ring-[#6366f1]/30 shrink-0">
-                  <UIcon :name="section.icon" class="size-4 text-[#6366f1]" />
+                <div class="flex w-9 h-9 items-center justify-center rounded-xl shrink-0"
+                     style="background: rgba(0,245,255,0.08); border: 1px solid rgba(0,245,255,0.2);">
+                  <UIcon :name="section.icon" class="w-4 h-4" style="color: #00f5ff;" />
                 </div>
-                <h2 class="text-xl font-bold">
-                  {{ section.title }}
-                </h2>
+                <h2 class="text-xl font-bold text-white">{{ section.title }}</h2>
               </div>
 
               <div class="space-y-4 pl-12">
                 <p
                   v-for="(para, idx) in section.content"
                   :key="idx"
-                  class="text-gray-600 dark:text-gray-300 leading-relaxed text-[15px]"
+                  class="leading-relaxed text-[15px]"
+                  style="color: rgba(255,255,255,0.55);"
                 >
                   {{ para }}
                 </p>
 
-                <!-- 数据卡片 -->
                 <div v-if="section.highlights" class="grid sm:grid-cols-2 gap-4 my-6">
                   <div
                     v-for="item in section.highlights"
                     :key="item.title"
-                    class="p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10"
+                    class="p-4 rounded-xl"
+                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);"
                   >
                     <div class="flex items-center gap-2 mb-2">
-                      <UIcon name="i-lucide-check-circle" class="size-4 text-[#6366f1]" />
-                      <span class="font-semibold text-sm">{{ item.title }}</span>
+                      <UIcon name="i-lucide-check-circle" class="w-4 h-4 shrink-0" style="color: #00ff88;" />
+                      <span class="font-semibold text-sm text-white">{{ item.title }}</span>
                     </div>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                      {{ item.description }}
-                    </p>
+                    <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.45);">{{ item.description }}</p>
                   </div>
                 </div>
 
                 <p
                   v-for="(para, idx) in section.afterHighlights"
                   :key="`after-${idx}`"
-                  class="text-gray-600 dark:text-gray-300 leading-relaxed text-[15px]"
+                  class="leading-relaxed text-[15px]"
+                  style="color: rgba(255,255,255,0.55);"
                 >
                   {{ para }}
                 </p>
 
-                <!-- 技术信息卡片 -->
                 <div v-if="section.technicalInfo" class="space-y-3 my-6">
                   <div
                     v-for="item in section.technicalInfo"
                     :key="item.title"
-                    class="flex gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10"
+                    class="flex gap-3 p-4 rounded-xl"
+                    style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);"
                   >
-                    <UIcon name="i-lucide-info" class="size-5 text-[#6366f1] shrink-0 mt-0.5" />
+                    <UIcon name="i-lucide-info" class="w-5 h-5 shrink-0 mt-0.5" style="color: #00f5ff;" />
                     <div>
-                      <p class="font-semibold text-sm mb-1">
-                        {{ item.title }}
-                      </p>
-                      <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                        {{ item.description }}
-                      </p>
+                      <p class="font-semibold text-sm mb-1 text-white">{{ item.title }}</p>
+                      <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.45);">{{ item.description }}</p>
                     </div>
                   </div>
                 </div>
 
                 <p
                   v-if="section.cookieNote"
-                  class="text-gray-500 dark:text-gray-400 leading-relaxed text-sm italic border-l-2 border-[#6366f1]/40 pl-4"
+                  class="leading-relaxed text-sm italic pl-4"
+                  style="color: rgba(255,255,255,0.4); border-left: 2px solid rgba(0,245,255,0.3);"
                 >
                   {{ section.cookieNote }}
                 </p>
@@ -246,23 +222,24 @@ const cards = computed(() => {
             </section>
           </div>
 
-          <!-- 底部导航 -->
-          <div class="mt-16 pt-8 border-t border-gray-200 dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-sm text-gray-400 dark:text-gray-500">
-              {{ t('legal.common.lastUpdated') }}
-            </p>
+          <!-- Bottom nav -->
+          <div class="mt-16 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+               style="border-top: 1px solid rgba(255,255,255,0.07);">
+            <p class="text-sm" style="color: rgba(255,255,255,0.3);">{{ t('legal.common.lastUpdated') }}</p>
             <div class="flex items-center gap-4">
-              <NuxtLink
-                to="/membership-service-agreement"
-                class="text-sm text-gray-500 dark:text-gray-400 hover:text-[#6366f1] transition-colors"
-              >
+              <NuxtLink to="/membership-service-agreement"
+                        class="text-sm transition-colors duration-200"
+                        style="color: rgba(255,255,255,0.4);"
+                        onmouseover="this.style.color='#00f5ff'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.4)'">
                 {{ t('legal.privacy.navLinks.membershipAgreement') }}
               </NuxtLink>
-              <span class="text-gray-300 dark:text-gray-600">·</span>
-              <NuxtLink
-                to="/terms-of-service"
-                class="text-sm text-gray-500 dark:text-gray-400 hover:text-[#6366f1] transition-colors"
-              >
+              <span style="color: rgba(255,255,255,0.15);">·</span>
+              <NuxtLink to="/terms-of-service"
+                        class="text-sm transition-colors duration-200"
+                        style="color: rgba(255,255,255,0.4);"
+                        onmouseover="this.style.color='#00f5ff'"
+                        onmouseout="this.style.color='rgba(255,255,255,0.4)'">
                 {{ t('legal.privacy.navLinks.termsOfService') }}
               </NuxtLink>
             </div>
